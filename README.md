@@ -41,3 +41,7 @@ Week 10
 
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/UWE-Ruby/rubyspring2014/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/UWE-Ruby/railsspring2014/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
