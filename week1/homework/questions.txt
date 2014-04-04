@@ -19,6 +19,24 @@ Questions:
 Project Description:
 <please put your project description here>
 # for quarter project. - open source *and* publicly hosted. (Heroku)
+ideas:
+1) web wrapper for bread-calc. who would use it? home bakers, probably not,
+  except for the few like me who are interested in baker's percentages. Pro
+  bakers? Maybe, but they mostly already have their recipes worked out, and
+  probably do it by hand. Would adding cost of goods to it make it worth 
+  a baker's time?
+2) contraction timer. A rewrite of a simple script I wrote when my wife went
+  into labor. They won't let you come to the hospital until contractions are
+  N minutes apart, so you need to record them, and measure the intervals, 
+  which is not so great when you are excited, nervous, and distracted. Web UI
+  might be good for this because you don't have to install, can access 
+  anywhere(-ish). Bad part is mixing privacy / ease of use concerns. You don't
+  want to log in for every contraction, but you also don't want any possibility
+  of scrambling people's records, and I would prefer not to have it be 
+  something insurance companies / governments could subpoena for gross purposes.
+3) web front-end for https://github.com/eleybourn/Book-Catalogue. Maybe a bit
+  stupid, because the point of this app is to enter the books using your 
+  phones barcode scanner.
 
 
 Link to code on Github:
