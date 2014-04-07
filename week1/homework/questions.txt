@@ -42,7 +42,8 @@ Questions:
 
 Project Description:
 
-Accounting for a companion app that accepts online orders for a fee. The companion app is a storefront site that accepts online orders and forwards them to shops for a fee.
+    Accounting for a companion app that accepts online orders for a fee. The companion app is a storefront site that accepts online orders and forwards them to shops for a fee.
 
 Link to code on Github:
-<please put the link to your code on github here>
+
+    https://github.com/ilynne/myr-accounting
