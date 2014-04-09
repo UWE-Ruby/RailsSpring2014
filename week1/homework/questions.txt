@@ -11,13 +11,37 @@ Put it on Github
 
 Questions:
 1. What is the difference between Bundler and RVM?
+Bundler is a very useful tool that will get and install all the gems 
+you need to run an application (it uses the gems and versions specified 
+in an applications gemfile). This is much easier than installing each
+gem by hand! RVM on the other hand is a tool that allows you to install 
+and switch between multiple versions of Ruby. It also allows you to switch 
+between 'gemsets' or bundles of gems since different gems/versions can
+sometimes conflict. When used together, RVM tells bundler where to
+install the gems. 
+
 2. What is REST and why is it useful?
+REST stands for Representational State Transfer, it is a simple way 
+to organize interactions between different systems. RESTful applications 
+use HTTP requests to post data (create and/or update), read data, and 
+delete data.
+
 3. What does CRUD stand for? 
+CRUD stands for the four basic functions (Create, Read, Update,
+Delete) that are done on a database.
+
 4. What does this line of code do, and what file in my rails app would it go in?
-   resources :students, except: :destroy
+resources :students, except: :destroy
+You can use this line of code to generate routes that are mapped to a
+controller action. This line creates all routes (index, show, new,
+edit, create, update) for Student but excludes destroy.
 
 Project Description:
-<please put your project description here>
+I would like to build on my previous gem idea but expand it into a web
+application with a user interface that allows users to enter the
+website url they want to conduct the search on. I also want to return
+the results as a nice table.
 
 Link to code on Github:
-<please put the link to your code on github here>
+https://github.com/rukk86/week1_railsapp
+
