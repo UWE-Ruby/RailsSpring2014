@@ -33,6 +33,30 @@ will not be shared with others. With a Bundler Gemfile under VC, anyone who
 grabs a project can have the dependancies auto-installed.
 
 2. What is REST and why is it useful?
+REST stands for REpresentational State Transfer. I don't understand it very 
+well. It is a set of constraints on how machines talk over a network:
+  Communication is stateless. (I don't need to know what we were just talking
+    about to continue the conversation; I just reply to requests. If I need
+    context, maybe I'll ask for a cookie?)
+  We use client - server architecture. If you ask me for something, I deliver
+    it, I don't ask you to compute it yourself.
+  I don't send my actual resource (say, info in a database); I send a 
+    representation of that resource (the same info could be rendered as html,
+    json, a pdf, an mp3...).
+  I let you know if it is appropriate to cache my representation. If you ask
+    for how long until the bus comes, I'll let you know that there is no 
+    point in caching that information.
+  I try to make a URI semantic, reasonable, and always point the same 
+    resource. (The contents of that resource may change over time, but what it
+    is should not.)
+It is meant to be useful in making data transfer simple. It allows us to have
+permanent URIs.  It reduces problems from packet drops / service interruptions
+(didn't get it?  Ask again - I won't even notice you were gone.) The name is
+more soothing than SOAP. (You can say RESTful instead of SOAPy.) It allows us
+to not have to rethink network communication every time we develop a service,
+and is thus a design constraint that, like song forms or literary genres, 
+allows us to focus on the project rather than on building a new architecture.
+
 3. What does CRUD stand for? 
 Create, Read, Update, Destroy. 
 
