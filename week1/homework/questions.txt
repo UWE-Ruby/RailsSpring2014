@@ -3,21 +3,34 @@ Chapter 1 - Section 1.1 on Bundler
 Chapter 3 REST, Resources, andRails - Sections 3.1 - 3.6
 
 Code:
-Create new rails app
-Add a ruby version and gemset to it
-Add one page of static content
-Create one Resource with Scaffolding
-Put it on Github
+Create new rails app. X
+Add a ruby version and gemset to it. X
+Add one page of static content X
+Create one Resource with Scaffolding X 
+Put it on Github X
 
 Questions:
 1. What is the difference between Bundler and RVM?
+
+Bundlering is an application that is used with RAILs to manage gem dependencies for your RAILs application. RVM is short for Ruby Version Manager and is used to manage, install, and work with different versions of ruby and gem sets. 
+
 2. What is REST and why is it useful?
+
+The reading defiantly isn't easy, but from what I understand REST is a network architecture style that consists or best practices for machine-to-machine communication. For example, a REST style machine-to-machine communication would use a client/server model, and the communication between the client/server would be stateless. The communication between the client and server will be requests, and the responses will be resources (or a representation of that resource)
+
 3. What does CRUD stand for? 
+Create Read Update Delete
+
 4. What does this line of code do, and what file in my rails app would it go in?
    resources :students, except: :destroy
 
+   Well, I feel like I missed someting on routes, I'll have to go back and read chapter 2. resources :students I beleive creates a set of routes EXCEPT one to for one to the destroy method?
+
+
+
 Project Description:
-<please put your project description here>
+I'd like to have a page that would allow users to share information about local mountain bike trails, their conditions, difficulties, and other material. I guess you could call it a social network for mountain bike trails.
+
 
 Link to code on Github:
-<please put the link to your code on github here>
+https://github.com/Mattsface/NorthwestMTBTrails
