@@ -6,7 +6,7 @@ Code:
 ✓Create new rails app
 ✓Add a ruby version and gemset to it
 ✓Add one page of static content
-Create one Resource with Scaffolding
+✓Create one Resource with Scaffolding
 ✓Put it on Github
 
 rvm use 2.0
@@ -24,6 +24,12 @@ rails g rspec:install
 git init
 git add .
 git commit .
+
+rails g scaffold Outlaw name nick wanted_for:text back_story:text facial_hair how_punished hat
+rake db:migrate
+rm db/migrate/20140410181827/*
+git add .
+git commit
 
 Questions:
 1. What is the difference between Bundler and RVM?
