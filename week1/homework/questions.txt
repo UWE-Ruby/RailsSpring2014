@@ -60,6 +60,12 @@ allows us to focus on the project rather than on building a new architecture.
 3. What does CRUD stand for? 
 Create, Read, Update, Destroy. 
 
+Snark from the c2 wiki[0]:
+Put a picture of the database on the screen and let the user fiddle with it. It
+lets you deliver an application without worrying overmuch about how it will be
+used, without wasting a lot of time talking to the user, and without actually
+having to do any design.
+
 4. What does this line of code do, and what file in my rails app would it go in?
    resources :students, except: :destroy
 
@@ -87,7 +93,25 @@ ideas:
   *reading* the data, instead of the very stupid export-as-csv-and-munge-with-
   perl-into-static-html script I am using now.
 
-
+Addendum:
+OK, I am going with bread-calc. I will call it good if I can get it 
+into Rails and add cost of goods. Json exports For Free means it will still
+be beneficial for off-line use. A db means prices might be easier to maintain,
+and collaboration is an easier possibility, and maybe we can have a record
+of 'variations on a theme', or '1st try, 2nd try, etc'.
+Maybes:
+1) predictive text for drop downs (ww -> whole wheat flour, oa -> oats, etc).
+  This is probably a whole separate project (and there is probably a gem 
+  for it already.)
+2) an ingredients measure converter - again, a separate gem. I bet this does
+  not exist yet. Not a units converter (grams to pounds) but instead:
+    1 egg = 40 grams
+    1 cup all purpose flour = 130 grams
+3) Generalize it to Recipe. Maybe Recipe is a module, mixed in to BreadRecipe,
+  and BeerRecipe, and GenericRecipe? Or Beer and Bread are subclassed from 
+  Recipe. 
 Link to code on Github:
 <please put the link to your code on github here>
 https://github.com/nbirnel/run_out_of_town_on_a_rail
+
+[0] http://c2.com/cgi/wiki?CrudScreen
