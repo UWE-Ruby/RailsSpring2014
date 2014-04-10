@@ -41,10 +41,11 @@ grabs a project can have the dependancies auto-installed.
 
 2. What is REST and why is it useful?
 REST stands for REpresentational State Transfer. I don't understand it very 
-well. It is a set of constraints on how machines talk over a network:
+well. It is a set of (philosophical, not software) constraints on how machines
+talk over a network:
   Communication is stateless. (I don't need to know what we were just talking
     about to continue the conversation; I just reply to requests. If I need
-    context, maybe I'll ask for a cookie?)
+    something like context, maybe I'll ask for a cookie?)
   We use client - server architecture. If you ask me for something, I deliver
     it, I don't ask you to compute it yourself.
   I don't send my actual resource (say, info in a database); I send a 
@@ -139,7 +140,11 @@ Maybes:
     1 cup all purpose flour = 130 grams
 3) Generalize it to Recipe. Maybe Recipe is a module, mixed in to BreadRecipe,
   and BeerRecipe, and GenericRecipe? Or Beer and Bread are subclassed from 
-  Recipe. 
+  Recipe. Maybe. I like how focussed it is as it stands, but I seems to just
+  be a subset of a more general domain.
+4) Rewrite in a more Prolog-ish manner, so it is natural to ask: "If I am
+  making a 60% loaf with 500 mL water, and I have measured out 200 g of 
+  whole wheat, how much all-purpose flour would I add to bring me up to bp100?"
 
 Link to code on Github:
 <please put the link to your code on github here>
