@@ -74,6 +74,29 @@ having to do any design.
 
 4. What does this line of code do, and what file in my rails app would it go in?
    resources :students, except: :destroy
+That line in config/routes.rb will disallow destroying a student.
+Interestingly, it does not remove the destroy button from the gui.
+
+Rails generates a route for seven actions:
+  :index => GET
+  :show => GET 
+  :new => GET 
+  :create => POST
+  :edit => GET
+  :update => PATCH/PUT
+  :destroy => DELETE
+(it seems to me it would have been nice for rails to use the same terminology
+as http. And I do not understand the difference between the multiple GET 
+actions).
+So normally, a plain 
+  resources :students
+is generated when you run 
+  rails g scaffold Student [some attributes]
+in config/routes.rb
+and this generates all 7 actions. You can narrow this down with
+  ,except: :destroy
+or equivalently:
+  ,only [:index, :show, :new, :create, :edit, :update]
 
 Project Description:
 <please put your project description here>
@@ -116,6 +139,7 @@ Maybes:
 3) Generalize it to Recipe. Maybe Recipe is a module, mixed in to BreadRecipe,
   and BeerRecipe, and GenericRecipe? Or Beer and Bread are subclassed from 
   Recipe. 
+
 Link to code on Github:
 <please put the link to your code on github here>
 https://github.com/nbirnel/run_out_of_town_on_a_rail
