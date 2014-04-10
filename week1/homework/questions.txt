@@ -1,13 +1,13 @@
 Reading:
-✓Chapter 1 - Section 1.1 on Bundler
-✓Chapter 3 REST, Resources, andRails - Sections 3.1 - 3.6
+Chapter 1 - Section 1.1 on Bundler
+Chapter 3 REST, Resources, andRails - Sections 3.1 - 3.6
 
 Code:
-✓Create new rails app
-✓Add a ruby version and gemset to it
-✓Add one page of static content
-✓Create one Resource with Scaffolding
-✓Put it on Github
+Create new rails app
+Add a ruby version and gemset to it
+Add one page of static content
+Create one Resource with Scaffolding
+Put it on Github
 
 rvm use 2.0
 gem install rails
@@ -30,6 +30,7 @@ rake db:migrate
 rm db/migrate/20140410181827/*
 git add .
 git commit
+(add sqlite to repo)
 
 Questions:
 1. What is the difference between Bundler and RVM?
