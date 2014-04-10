@@ -3,6 +3,8 @@ RailsSpring2014
 
 Course Materials for the Ruby Continuing Education Certificate Program Rails Spring 2014 Online Class
 
+Link to class management app: https://github.com/UWE-Ruby/class_mngmt_Spring2014
+
 Syllabus
 ============
 
