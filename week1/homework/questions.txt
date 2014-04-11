@@ -17,12 +17,14 @@ Questions:
 
 2. What is REST and why is it useful?
 	
-	REST (Representational State Transfer) ...
+	REST (Representational State Transfer) defines a way of communication between software system's components (in the context of rails, a web application) by imposing constraints on their interactions.
+
+	It is useful as it provides uniform inteface for interaction between different components of system/s.
 
 
 3. What does CRUD stand for? 
 
-	CRUD stands for Create, Read, Update and Delete operations ususally of database and in the context of rails, routes mentioned in routes.rb map to one of these operations (usually).
+	CRUD stands for Create, Read, Update and Delete operations ususally of database and in the context of rails, routes mentioned in routes.rb map to one of these operations (usually) through controller actions.
 
 4. What does this line of code do, and what file in my rails app would it go in?
    resources :students, except: :destroy
