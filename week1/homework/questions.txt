@@ -11,13 +11,31 @@ Put it on Github
 
 Questions:
 1. What is the difference between Bundler and RVM?
+
+Bundler manages gem dependencies and installs any that are needed. Ruby Version Manager (RVM) allows you to install, manage, and switch between different Ruby versions.
+
 2. What is REST and why is it useful?
+
+REST stands for representational state transfer. REST is an architecture style for designing networked applications that ignores details of component implementation and protocol syntax in order to focus on the roles of components, the constraints upon their interaction with other components, and their interpretation of significant data elements. Since REST is stateless, it's simpler than remote procedure calls (RPC) and easier to test.
+
 3. What does CRUD stand for? 
+
+Create, read, update, delete.
+
 4. What does this line of code do, and what file in my rails app would it go in?
    resources :students, except: :destroy
 
+   This line of code creates routes for the student resource, but it adds an exeception for the destroy controller action, so a user wouldn't be able to destory a student resource. It goes in the routes.rb file.
+
 Project Description:
-<please put your project description here>
+
+I'm creating an anonymous submission system for authors to submit their short stories, novels, and other written work to publishers. Authors will be able to keep track of their submissions in one place and will know as soon as their work is accepted for publication or rejected. Since the submission system will be anonymous, publishers will select authors based solely on the quality of their writing. Once they do, the author's contact info will be revealed so the publisher can get in touch. Ideally, it should do the following:
+
+	+ Hide authors' names and email addresses from publishers (using a key-value pair) until the publisher accepts the submission for publication. Once a publisher selects the submission for publication, the author's contact info becomes available so they can connect.
+
+	+ Allow authors to keep track of each submission (i.e. when it was submitted, how long it's been since then, etc.)
+
+	+ Enable authors to enter their submission's information once and save it, so they can easily submit the same piece of writing to other publishers without having to reenter the information again.
 
 Link to code on Github:
-<please put the link to your code on github here>
+https://github.com/brandonlafave/submission_tracker
