@@ -8,16 +8,27 @@ Add a ruby version and gemset to it
 Add one page of static content
 Create one Resource with Scaffolding
 Put it on Github
+	Completed: dw
 
 Questions:
 1. What is the difference between Bundler and RVM?
+	RVM is a program that lets you switch between different rubies and gem environments while you are working. The gem environments are implemented as gemsets, which are named sets of gems. (The gemset may additionally specify the versions of the individual gems in the gemset.) RVM introduces the .rvmrc file that automatically switches you between different Ruby versions and gemsets, depending on what folder you are in. RVM does not help you install or maintain your gemsets, you have to do that yourself or with bundler. Bundler is a tool that automates the installation and maintenance of the gems in gemsets. Bundler introduces the .gemfile file that defines the gems (and gem versions) in the gemset. 
+
 2. What is REST and why is it useful?
+	 Short for Representational State Transfer is an architectural style for large-scale software design. In practice, REST is implemented with HTTP and XML or JSON. REST enables two computers to talk to each other, not unlike technologies like RPC, CORBA, SOAP, and DCOM, though far simpler.
 3. What does CRUD stand for? 
+	Create Read Update Delete data from a database.
+
 4. What does this line of code do, and what file in my rails app would it go in?
-   resources :students, except: :destroy
+   resources :students, except: :destroy 
+   Define in routes will create the create, update, new, edit, show, index routes for the students except the route for destroy route.
 
 Project Description:
 <please put your project description here>
+	I want to build a website for the wed night bible class we have. It will have file upload and download capability and blogging. Also some static content
+	Initial design will be Home page, About page, Contact page, Articles page, Blog page
+	We should be able to archive articles which will be search-able but not display unless requested.
 
 Link to code on Github:
 <please put the link to your code on github here>
+https://github.com/danielwilliams12/wbs/tree/master/wbs_app
