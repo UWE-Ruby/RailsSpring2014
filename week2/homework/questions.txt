@@ -8,7 +8,9 @@ Setup a root route to a home or welcome controller
 Have a link on your homepage to your scaffolded resource from last week
 ✓
 Have a link on your homepage that triggers a change on your homepage (wording change, expansion of text, change a color, etc...)
+✓
 Create a view helper that will generate different content on your homepage based on a param value
+✓
 
 Questions:
 1. Why does a Rails app have routing? 
@@ -16,6 +18,11 @@ To dynamically pass along http requests to controllers with correct parameters
 - ie, providing RESTful addresses for views that do not exist until they are
 requested.
 2. How would you render the same view for two different controllers? (code example is fine)
+First, I would ask why.
+Having gotten a plausible answer, I would add 
+  render "somebody/elses/view"
+to the 'additional' controller. But how do I get the environment in there?
+
 3. If you wanted to check a parameter before calling any controller action, what would you do? (code example is fine)
 
 Link to code on Github:
