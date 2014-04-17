@@ -5,26 +5,46 @@ April 16, 2014
 						Week 2 Homework
 
 Reading:
-	- Chapter 4 Working with Controllers: 4.3 - 4.7  (Skip the rack console exercise - unless you really want to do it) --done
+	- Chapter 4 Working with Controllers: 4.3 - 4.7
+	  (Skip the rack console exercise - unless you 
+	  really want to do it) --done
 	- Chapter 2 Routing: 2.1, 2.2, 2.4, 2.6, 2.7 --done
 
 
 Code:
-	-- Setup a root route to a home or welcome controller --done (see HomeController)
-	-- Have a link on your homepage to your scaffolded resource from last week --done (see Garden link)
-	-- Have a link on your homepage that triggers a change on your homepage (wording change, expansion of text, change a color, etc...) --done (see Go Green! link)
-	-- Create a view helper that will generate different content on your homepage based on a param value --done (see http://localhost:3000/?go_green=1)
+	-- Setup a root route to a home or welcome controller 
+			--done (see HomeController)
+	-- Have a link on your homepage to your scaffolded 
+		 resource from last week --done (see Garden link)
+	-- Have a link on your homepage that triggers a change 
+		 on your homepage (wording change, expansion of text, change a color, etc...) --done (see Go Green! link)
+	-- Create a view helper that will generate different 
+		 content on your homepage based on a param value 
+		   --done (see http://localhost:3000/?go_green=1)
 
 
 Questions:
 1. Why does a Rails app have routing? 
 
-	Rails applications have routing for multiple reasons. Most obviously, routing exists so that developers can specify which actions and controllers should be used to fulfill incoming HTTP requests for specific URL locations. In other words, routing helps you manage the paths to all of the content on a particular website. In the case of especially large or complex sites, routing also helps your app adhere to RESTful practices, which dictate logical and consistent naming methods that make it easy for developers to write and maintain their code, since routing helps to align paths with their associated CRUD options. 
+	Rails applications have routing for multiple reasons. 
+	Most obviously, routing exists so that developers can 
+	specify which actions and controllers should be used to 
+	fulfill incoming HTTP requests for specific URL locations. 
+	In other words, routing helps you manage the paths to all 
+	of the content on a particular website. In the case of 
+	especially large or complex sites, routing also helps your 
+	app adhere to RESTful practices, which dictate logical and 
+	consistent naming methods that make it easy for developers 
+	to write and maintain their code, since routing helps to 
+	align paths with their associated CRUD options. 
 
 
 2. How would you render the same view for two different controllers? (code example is fine)
 	
-	I would use "render," which can accept a full path that can references a second controller, or even another Rails application. For example, you could use the following two lines:
+	I would use "render," which can accept a full path that 
+	can references a second controller, or even another Rails 
+	application. For example, you could use the following two 
+	lines:
 
 		render "products/show"
 		render "u/apps/other_app/app/views/products/show"
@@ -32,7 +52,10 @@ Questions:
 
 3. If you wanted to check a parameter before calling any controller action, what would you do? (code example is fine)
 
-	I would use the "before_action" callback in order to run the parameter check before the controller action was executed. Most likely, I would do this by passing the before_action callback a block to process, like so:
+	I would use the "before_action" callback in order to run 
+	the parameter check before the controller action was 
+	executed. Most likely, I would do this by passing the 
+	before_action callback a block to process, like so:
 
 		before_action { redirect_to home_path unless authenticated? }
 
