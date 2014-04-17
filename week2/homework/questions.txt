@@ -10,6 +10,9 @@ Create a view helper that will generate different content on your homepage based
 
 Questions:
 1. Why does a Rails app have routing? 
+To dynamically send http requests to controllers with correct parameters - ie,
+providing RESTful addresses for views that do not exist until they are 
+requested.
 2. How would you render the same view for two different controllers? (code example is fine)
 3. If you wanted to check a parameter before calling any controller action, what would you do? (code example is fine)
 
