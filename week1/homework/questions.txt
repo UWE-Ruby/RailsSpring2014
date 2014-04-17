@@ -9,6 +9,8 @@ Add one page of static content
 Create one Resource with Scaffolding
 Put it on Github
 
+https://github.com/jatla/RailsHomeWork
+
 Questions:
 
 1. What is the difference between Bundler and RVM?
