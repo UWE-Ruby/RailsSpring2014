@@ -2,8 +2,8 @@ Reading:
 Chapter 4 Working with Controllers: 4.3 - 4.7  (Skip the rack console exercise - unless you really want to do it)
 Chapter 2 Routing: 2.1, 2.2, 2.4, 2.6, 2.7 
 
-Code:
-Setup a root route to a home or welcome controller
+Code: (I created a seperate app called RailsHomeWork. Links to the checkins corresponding to homework are given below) 
+Setup a root route to a home or welcome controller 
 Have a link on your homepage to your scaffolded resource from last week
 Have a link on your homepage that triggers a change on your homepage (wording change, expansion of text, change a color, etc...)
 Create a view helper that will generate different content on your homepage based on a param value
@@ -18,6 +18,27 @@ Questions:
   render "<path to template file>"
   Ex: render "/home/index.html"
 3. If you wanted to check a parameter before calling any controller action, what would you do? (code example is fine)
+  
+  I would define an action call back to be executed before the action as below:
+
+  class Wee2HomeWorkController
+  		before_action :validate_params
+
+  		def actionName
+  			.
+  			.
+  			.
+  		end
+
+  	  private
+
+  	  	def validate_params
+  	  		# Validate that parameter p_name is present always
+  	  		params.require(:p_name)
+  	  	end
+  end
 
 Link to code on Github:
-<please put the link to your code on github here> 
+https://github.com/jatla/RailsHomeWork/commit/bd837854bbd324c2cc4251d8ee8dc5487d222443
+https://github.com/jatla/RailsHomeWork/commit/ea34f52363b03be3e1a2356f4d9c12e128ce1b9f
+
