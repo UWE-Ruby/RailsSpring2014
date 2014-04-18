@@ -11,7 +11,7 @@ Create a view helper that will generate different content on your homepage based
 Questions:
 1. Why does a Rails app have routing? 
 A Rails app has routing to map requests to controller action  methods, and to enable the dynamic generation 
-of URLS for use in methods such as link_to and redirect_to.
+of URLS for use in methods including link_to and redirect_to.
 
 2. How would you render the same view for two different controllers? (code example is fine)
 
