@@ -24,6 +24,15 @@ Having gotten a plausible answer, I would add
 to the 'additional' controller. But how do I get the environment in there?
 
 3. If you wanted to check a parameter before calling any controller action, what would you do? (code example is fine)
+'action' = method
+or 
+'action' = something done from / inside a method?
+for the second, one might parse params before the render; check if they are
+sensible, turn some of them into booleans, so forth. The boolean part is what I
+am struggling with right now, is how to pass true and false. The params are
+apparently all Strings before they reach us.
+
+For the first, I got nothing.
 
 Link to code on Github:
-<please put the link to your code on github here> 
+https://github.com/nbirnel/run_out_of_town_on_a_rail
