@@ -11,13 +11,25 @@ Put it on Github
 
 Questions:
 1. What is the difference between Bundler and RVM?
+Bundler has to do with the gems we want to install, RVM manages the versions
+of ruby and lets us have different buckets to install gems.
+
 2. What is REST and why is it useful?
+Okay, without reading the book yet, REST is an interface for interaction with
+databases. You are able to access the REST interface, typically through http
+where you can add/retrieve information from a database. Most common API are REST based.
+(we will see if that holds up after i do the reading :o)
+
 3. What does CRUD stand for? 
+Create, Read, Update, Destroy
 4. What does this line of code do, and what file in my rails app would it go in?
    resources :students, except: :destroy
+It would go in the routes.rb file
+It would creaet a route for students but not for destroy
 
 Project Description:
-<please put your project description here>
+I am still thinking about this. Maybe a server metadata service, something similar
+to what AWS instances have but in non AWS envioronments.
 
 Link to code on Github:
-<please put the link to your code on github here>
+https://github.com/keviny22/class_mngmt_Rails2014
