@@ -1,0 +1,27 @@
+Reading:
+Chapter 1 - Section 1.1 on Bundler
+Chapter 3 REST, Resources, and Rails - Sections 3.1 - 3.6
+
+Code:
+Create new rails app
+Add a ruby version and gemset to it
+Add one page of static content
+Create one Resource with Scaffolding
+Put it on Github
+
+Questions:
+1. What is the difference between Bundler and RVM?
+	Bundler installs dependancies on your machine (which are often runtime dependancies), while RVM helps manage the versions installed to give the desired development environment.
+2. What is REST and why is it useful?
+	REST stands for Representational State Transfer, and provides a framework and set of best practices for the orginization of information and naming of methods.
+3. What does CRUD stand for?
+	Create, Read, Update, Destroy
+4. What does this line of code do, and what file in my rails app would it go in?
+   resources :students, except: :destroy
+   This will create the Create, Update and Revise paths for Students, but will not create destroy.
+
+Project Description:
+I'm going to make a goal management application. It will promt the user to input a goal, let them define subgoals to accomplish by certain dates. For every date the user wants to work on the goal, the app will also want them to update their progress (in more of a journal form) and say if they are satisfied or dissatified with their progress or the goal in general. This is to help the user determine if the goal is realistic or even something they actually want to do. When the goal is completed the user will be able to combine those entries together into a story of their journey. 
+
+Link to code on Github:
+https://github.com/owenkelly/GoalSpec
