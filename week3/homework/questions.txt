@@ -15,4 +15,7 @@ Questions:
 4.
 
 Link to code on Github:
-<please put the link to your code on github here>
+https://github.com/jatla/RailsHomeWork/blob/master/app/controllers/week3_controller.rb
+https://github.com/jatla/RailsHomeWork/blob/master/db/migrate/20140424172019_add_status_to_home_works.rb
+
+Complete commit: https://github.com/jatla/RailsHomeWork/commit/89dab87c87f649b32169c8a9602b0173d1f45cd3
