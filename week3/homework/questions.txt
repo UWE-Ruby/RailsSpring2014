@@ -15,4 +15,4 @@ Questions:
 4.
 
 Link to code on Github:
-<please put the link to your code on github here>
+https://github.com/psytau/week2_rails/tree/week3
