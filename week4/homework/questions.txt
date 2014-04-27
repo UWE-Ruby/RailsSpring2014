@@ -63,4 +63,4 @@ production_sec:
 You run it with rake db:seeds, and it allows you to plant any information into your database that is necessary to run you application, such as city/state abbreviations. 
 
 Link to code on Github:
-<please put the link to your code on github here>
+https://github.com/THEJRRR/DietStartsTomorrow
