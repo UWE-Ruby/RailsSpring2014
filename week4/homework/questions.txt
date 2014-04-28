@@ -35,8 +35,18 @@ Questions:
   b) I can't find any other complaints about it. That complaint is good enough
   for me. The only problem b I can come up with is that it will get you
   laughed at or fired.
+  #FIXME probably not what Renée is looking for.
 
 4. How is Rails form_for object oriented?
+  It generates "form builder" object which has methods called on it to spit
+  out html:
+    do |builder|
+      builder.text_field
+      <code>
+      builder.submit 
+    end
+  (though this would typically be embedded in erb)
+  #FIXME this is not insightful
 
 5. How would I use postgres in production and sqlite for development? What files would I change and how would I change them?
   Add a postgresql adaptor to config/databases.yml (more Rails cut and paste,
