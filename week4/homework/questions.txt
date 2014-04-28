@@ -53,7 +53,7 @@ Questions:
   sigh). Bethany put the user/pass combo in here, but said that best practice
   might be to .gitignore this file, and provide a database.yml.sample. Lynne
   suggested something like:
-    password: ENV{"POSTGRESQL_PROD_PASS"}
+    password: ENV["POSTGRESQL_PROD_PASS"]
   which I am a bit more comfortable with, but I'd like to be convinced
   further.
   
