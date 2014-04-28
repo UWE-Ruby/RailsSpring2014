@@ -12,6 +12,15 @@ Code:
 
 Questions:
 1. What is ActiveRecord and why is it useful?
+  ActiveRecord is Rails' implementation of and Object Relational Mapping:
+  translating ruby objects into SQL tables / records / statements, and vice-
+  versa.
+  It is useful because
+    a) you can write and read clean-ish ruby instead of dirty, filthy SQL. 
+    b) you can (partially) ignore SQL implementation differences, allowing
+       different DBs in production and development, or migration of DBs 
+       without rewriting the app.
+
 2. What problems could happen if you change a migration file after you have run it and committed it to github? (list 2)
   a) Production could have run the migration already, and when they deploy
   later changes they won't be in sync development. 
@@ -28,6 +37,7 @@ Questions:
   laughed at or fired.
 
 4. How is Rails form_for object oriented?
+
 5. How would I use postgres in production and sqlite for development? What files would I change and how would I change them?
   Add a postgresql adaptor to config/databases.yml (more Rails cut and paste,
   sigh). Bethany put the user/pass combo in here, but said that best practice
