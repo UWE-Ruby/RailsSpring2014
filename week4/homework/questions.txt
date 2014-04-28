@@ -17,10 +17,22 @@ Questions:
   later changes they won't be in sync development. 
   b) When production pulls, instead of a clean pull they may get a conflict,
   which is presumably not their job to know how to reconcile.
+
 3. What problems can you run into with the Rails has_and_belongs_to_many method? (list 2)
 4. How is Rails form_for object oriented?
 5. How would I use postgres in production and sqlite for development? What files would I change and how would I change them?
 6. What is the seeds file? How do I run it?
+  db/seeds.rb contains ruby code to generate a default set of data - perhaps
+  for testing, perhaps for an initial population for production.
+  It is imperative in style:
+    SomeClass.create(a_key: "It's value",
+      another_key: "another value"
+      )
+  and is run by 
+    rake db:seed
+  You can pull in csv, yaml, etc by editing your Rakefile:
+  http://stackoverflow.com/questions/4410794/ruby-on-rails-import-data-from-a-csv-file
+  (ie, on the fly generate a hash for each record)
 
 Link to code on Github:
 <please put the link to your code on github here>
