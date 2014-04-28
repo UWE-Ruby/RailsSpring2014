@@ -19,6 +19,14 @@ Questions:
   which is presumably not their job to know how to reconcile.
 
 3. What problems can you run into with the Rails has_and_belongs_to_many method? (list 2)
+  a) It creates an intersection table with nothing but primary keys which is
+  not visible to Rails, so if each Table1 row has a unique key for each Table2
+  row it is related to, Rails can't put that in the intersection table. In
+  short, it makes it near impossible to extend the relation
+  b) I can't find any other complaints about it. That complaint is good enough
+  for me. The only problem b I can come up with is that it will get you
+  laughed at or fired.
+
 4. How is Rails form_for object oriented?
 5. How would I use postgres in production and sqlite for development? What files would I change and how would I change them?
   Add a postgresql adaptor to config/databases.yml (more Rails cut and paste,
