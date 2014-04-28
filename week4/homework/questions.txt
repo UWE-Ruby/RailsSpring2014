@@ -54,10 +54,16 @@ Questions:
   might be to .gitignore this file, and provide a database.yml.sample. Lynne
   suggested something like:
     password: ENV{"POSTGRESQL_PROD_PASS"}
+  which I am a bit more comfortable with, but I'd like to be convinced
+  further.
   
-  Add pg to Gemfile for :production. (note - I had to install some headers
-  in Ubuntu for this - bundler couldn't seem to figure out the system
-  dependencies on it's own. This would concern me for deployment.)
+  Add pg to Gemfile for :production. 
+
+  bundle install (note - I had to install some headers in Ubuntu for this -
+  bundler couldn't seem to figure out the system dependencies on it's own. This
+  would concern me for deployment.)
+
+  rake db:setup
 
 6. What is the seeds file? How do I run it?
   db/seeds.rb contains ruby code to generate a default set of data - perhaps
