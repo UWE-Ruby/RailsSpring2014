@@ -27,16 +27,11 @@ The problems with habtm begin once you want to add extra columns to the join tab
 upgrade the relationship to use has_many :through instead because records
 returned from join tables with additional attributes will be marked
 as read-only, because it's not possible to save changes to those additional
-attributes.
-
-Unless the join table is explicitly specified as an option, Rails guesses its
-name by concatenating the table names of the joined classes, in alphabetical order and separated with an underscore.
-
-
-
+attributes. Also it's clear how they are associated. Moreover, Unless the join table is explicitly 
+specified as an option, Rails guesses its name by concatenating the table names of the joined classes, in alphabetical order and separated with an underscore.
 
 4. How is Rails form_for object oriented?
-
+It turns forms into objects using the fields as properties.
 
 5. How would I use postgres in production and sqlite for development? What files would I change and how would I change them?
 You can change the database.yml and specify for each enviornment (production,
