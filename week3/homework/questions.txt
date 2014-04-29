@@ -4,15 +4,36 @@ Chapter 5 Working with Active Record - Sections 5.1 - 5.4
 Chapter 6 Active Record Migrations - Sections 6.1-6.3
 
 Code
-Add a different layout for 2 of your routes
-Create a controller filter for just one action
-Add a migration to your application
+1. Add a different layout for 2 of your routes
+	added secondlayout and put in 
+2. Create a controller filter for just one action
+class StaticPagesController < ApplicationController
+  before_filter :set_message, only: :home
+  def home
+  	 end
+  def help
+  end
+  def about
+  end
+  def set_message
+  	@message = "Hello message"
+  end
+end
 
-Questions:
+
+3. Add a migration to your application
+	rails generate model User name:string email:string
+      invoke  active_record
+      create    db/migrate/20140429224119_create_users.rb
+      create    app/models/user.rb
+      invoke    rspec
+      create      spec/models/user_spec.rb
+
+Questions: I believe these questions are in week 4 homework.
 1.
 2.
 3.
 4.
 
 Link to code on Github:
-https://github.com/danielwilliams12/wbs_new/tree/master/sample_app
+hhttps://github.com/danielwilliams12/wbs_new/tree/master/sample_app
