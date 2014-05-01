@@ -12,11 +12,53 @@ Code:
 
 Questions:
 1. What is ActiveRecord and why is it useful?
+
+	ActiveRecord is the interface to your model. It is an implementation of the Active Record pattern. It is useful because it provides many methods like validation of your data and relationships between models.
+
 2. What problems could happen if you change a migration file after you have run it and committed it to github? (list 2)
+
+	If you have already run it, Rails will not run it again. So your changes will not be applied.
+	If you have already committed it to github, your colleauges will have the old file and will be out of sync. When you do a push, the changes will go to github, but the migration will not have been run for you.
+
 3. What problems can you run into with the Rails has_and_belongs_to_many method? (list 2)
+
+	One problem is that the association is not bi-directional.
+	Another problem is that habtm does not describe HOW the two models are associated.
+	Do I get bonus points for three? Reneé will scowl at you.
+
 4. How is Rails form_for object oriented?
+
+	 form_for can infer a great deal about the form you need from the model.
+
 5. How would I use postgres in production and sqlite for development? What files would I change and how would I change them?
+
+	You would create or edit the database.yml file to use sqlite in the development environment and set up an entry for production with the postgres credentials. You also need a production.rb and development.rb file in your config/environments folders.
+
+	The database.yml file might look something like:
+
+		development:
+      adapter: sqlite3
+      database: db/development.sqlite3
+      pool: 5
+      timeout: 5000
+
+		test:
+		  adapter: sqlite3
+      database: db/test.sqlite3
+      pool: 5
+      timeout: 5000
+
+		production:
+		  adapter: postgresql
+      database: production
+      host: hostname
+      username: user_name
+      pool: 5
+      timeout: 5000
+
 6. What is the seeds file? How do I run it?
+
+	The seeds file is used to populate a database with sample or initial data. You run it with rake db:setup.
 
 Link to code on Github:
 <please put the link to your code on github here>
