@@ -1,22 +1,118 @@
+Sarah Wheeler
+April 28, 2014
+Ruby 210
+
+						Week 4 Homework
+
 Reading:
-  Chapter 6: Sections 4-6
-  Chapter 7: All
-  Chapter 9: Section 1
-  Chapter 11: Sections 9-11
+  Chapter 6: Sections 4-6 --done
+  Chapter 7: All --done
+  Chapter 9: Section 1 --done
+  Chapter 11: Sections 9-11 --done
 
 Code:
   Add 2 relationships to your app:
-    1. Has Many (one-to-many)
-    2. Has Many Through (many-to-many)
-  Add 2 named scopes
+    1. Has Many (one-to-many) --done
+         --Added Garden model, set up for Garden has_many Plants
+    2. Has Many Through (many-to-many) --done
+         --Added Ownership model, set up User and Farm through Ownership
+
+  Add 2 named scopes --done
+    --Scopes added to Garden model
 
 Questions:
-1. What is ActiveRecord and why is it useful?
-2. What problems could happen if you change a migration file after you have run it and committed it to github? (list 2)
-3. What problems can you run into with the Rails has_and_belongs_to_many method? (list 2)
-4. How is Rails form_for object oriented?
-5. How would I use postgres in production and sqlite for development? What files would I change and how would I change them?
-6. What is the seeds file? How do I run it?
+
+  1. What is ActiveRecord and why is it useful?
+
+      ActiveRecord is an object relational mapping 
+      tool that allows you to treat database entries 
+      as objects in Rails. Model classes that inherit 
+      from ActiveRecord allow you to create, destroy, 
+      nd interact with the tables in databases. 
+
+      One major benefit of ActiveRecord is that it 
+      offers you the flexibility to work with different 
+      kinds of relational databases, including MySQL, 
+      SQLite, and Postgres, while allowing you to use 
+      the same Rails syntax in every scenario. 
+
+
+  2. What problems could happen if you change a migration file after you have run it and committed it to github? (list 2)
+
+      First, Rails won't update the schema.rb file 
+      to reflect the changes, since it thinks it has 
+      already run that migration. To fix this, you should 
+      run 'rake db:rollback' to undo the last migration, 
+      and then 'rake db:migrate' to update it again.
+
+      Another issue is that someone else on your team 
+      would no longer have the most up-to-date version of 
+      your database, and this could affect the specific Rails 
+      environments that they might be using for development.
+
+
+  3. What problems can you run into with the Rails has_and_belongs_to_many method? (list 2)
+
+      One issue is that it makes it difficult to add 
+      extra columns to your HABTM's join table further 
+      along in your application's development; although 
+      they can be added, they will be marked as read-only, 
+      and won't be read as "real" joins. 
+
+      Another issue is that it doesn't set up primary keys 
+      on the join table. Because the has_many and :through 
+      method allows you to set up multiple relationships 
+      with the join table at once, it's considered a superior 
+      option.
+
+
+  4. How is Rails form_for object oriented?
+
+      The form_for helper method is object oriented 
+      because it translates database fields into objects 
+      that can generate HTML forms. The data entered 
+      into the HTML form is passed to Rails as parameters, 
+      and because form_for converts everything into objects, 
+      you can manipulate the incoming data through form_for 
+      options.
+
+
+  5. How would I use postgres in production and sqlite for development? What files would I change and how would I change them?
+
+      To use different databases depending on your 
+      Rails environment (i.e., production vs. development), 
+      you simply have to configure the details in the 
+      'config/database.yml' file, like so: 
+
+        development:
+          adapter: sqlite3
+          database: db/development.sqlite3
+          pool: 5
+          timeout: 5000
+
+        production:
+          adapter: postgresql
+          database: db/production.postgresql
+          pool: 5
+          timeout: 5000
+
+      You may also need to install the specific database 
+      gem and version in the Gemfile (an easy one-liner: 
+      gem 'sqlite3'), and as always, run 'bundle install' 
+      in the Rails command line afterward to package the 
+      new database gem with your application.
+
+
+  6. What is the seeds file? How do I run it?
+
+      The seeds file is used to store and generate data 
+      that populates the databases in your application. 
+      It might contain dummy data for a testing environment 
+      (although this could also be stored in Rake tasks, or achieved through a gem like FactoryGirl), or something 
+      like admin user creation. To run it, use the command 
+      "rake db:seed" in the Rails shell. 
+
 
 Link to code on Github:
-<please put the link to your code on github here>
+
+    https://github.com/sarahwheeler/cultivate
