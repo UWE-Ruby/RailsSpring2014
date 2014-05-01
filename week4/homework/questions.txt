@@ -12,11 +12,43 @@ Code:
 
 Questions:
 1. What is ActiveRecord and why is it useful?
+	Active Record is the M in MVC - the model - which is the layer of the system responsible for representing business data and logic. Active Record facilitates the creation and use of business objects whose data requires persistent storage to a database. It is an implementation of the Active Record pattern which itself is a description of an Object Relational Mapping system.
+	It is useful because Object-Relational Mapping, commonly referred to as its abbreviation ORM, is a technique that connects the rich objects of an application to tables in a relational database management system. Using ORM, the properties and relationships of the objects in an application can be easily stored and retrieved from a database without writing SQL statements directly and with less overall database access code.
 2. What problems could happen if you change a migration file after you have run it and committed it to github? (list 2)
+	you could end up with two migration files on github which are out of sync with the commited code.
 3. What problems can you run into with the Rails has_and_belongs_to_many method? (list 2)
+	Not have the relationships set correctly in the controller.
 4. How is Rails form_for object oriented?
+	form_for(record, options = {}, &block) public
+	Creates a form that allows the user to create or update the attributes of a specific model object.
 5. How would I use postgres in production and sqlite for development? What files would I change and how would I change them?
+Designate them in the database.yml file
+Example:
+development:
+  adapter: postgresql
+  encoding: utf8
+  database: project_development
+  pool: 5
+  username: 
+  password:
+
+test: &TEST
+  adapter: postgresql
+  encoding: utf8
+  database: project_test
+  pool: 5
+  username: 
+  password:
+
+production:
+  adapter: postgresql
+  encoding: utf8
+  database: project_production
+  pool: 5
+  username: 
+  password:
 6. What is the seeds file? How do I run it?
+Data to seed the database to run tests.
 
 Link to code on Github:
-<please put the link to your code on github here>
+https://github.com/danielwilliams12/wbs_new/tree/master/sample_app
