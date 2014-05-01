@@ -12,11 +12,51 @@ Code:
 
 Questions:
 1. What is ActiveRecord and why is it useful?
+	ActiveRecord is the object that encapsulates and provides access to a row of data from a database table. It also provides the ability to add business logic.
 2. What problems could happen if you change a migration file after you have run it and committed it to github? (list 2)
+	1. The updated migration would not be run as rails assumes it to be run already.
+	2. Any future migrations depending on those changes would be broken.
 3. What problems can you run into with the Rails has_and_belongs_to_many method? (list 2)
 4. How is Rails form_for object oriented?
 5. How would I use postgres in production and sqlite for development? What files would I change and how would I change them?
+	We need to change database.yml and Gemfile.
+
+	database.yml:
+		development:
+		  adapter: sqlite3
+		  database: db/development.sqlite3
+		  pool: 5
+		  timeout: 5000
+
+		  .
+		  .
+		  .
+
+		production:
+		  adapter: postgresql
+		  encoding: unicode
+		  database: rails_homework
+		  pool: 5
+		  username: user_name
+		  password: pwd
+
+
+	Gemfile:
+
+		# Use sqlite3 as the database for Active Record in test & development
+		group :test, :development do
+			gem 'sqlite3'
+		end
+
+		# Use postgres as the database for Active Record in prod
+		gem 'pg', '~> 0.17.1'
+
 6. What is the seeds file? How do I run it?
+	
+	Seeds file is used to pre-fill the database with required data after setting it up or during setup.
+
+	rake db:seed command is used to run it.
 
 Link to code on Github:
-<please put the link to your code on github here>
+https://github.com/jatla/RailsHomeWork/commit/73fcfc7efd332a7f083072122d5397fe981a4187
+https://github.com/jatla/RailsHomeWork/commit/526997a27a769a0efe74e72e25f3df2f181baacf
