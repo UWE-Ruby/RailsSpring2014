@@ -1,0 +1,7 @@
+Reading:
+Chapter 21: All
+Active Record Validations: (http://guides.rubyonrails.org/active_record_validations.html)
+
+Code:
+Add 2 spec controller tests and methods
+Add 1 validation to a model including code and test
