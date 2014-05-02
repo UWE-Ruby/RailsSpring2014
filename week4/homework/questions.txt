@@ -7,8 +7,27 @@ Reading:
 Code:
   Add 2 relationships to your app:
     1. Has Many (one-to-many)
+    file: user.rb
+    class User < ActiveRecord::Base
+    has_many :microposts
+    end
+
+
     2. Has Many Through (many-to-many)
+File: microposts.rb
+    class Micropost < ActiveRecord::Base
+     belongs_to :user
+   validates :content, length: { maximum: 140 }
+end
   Add 2 named scopes
+ class Micropost < ActiveRecord::Base
+     belongs_to :user
+     default_scope -> { order('created_at DESC') }
+     validates :user_id, presence: true
+     # named_scope :posts, :conditions => { :price => 0..5 }
+     # http://railscasts.com/episodes/108-named-scope
+   validates :content, length: { maximum: 140 }
+end
 
 Questions:
 1. What is ActiveRecord and why is it useful?
