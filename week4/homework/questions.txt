@@ -1,0 +1,44 @@
+Reading:
+  Chapter 6: Sections 4-6
+  Chapter 7: All
+  Chapter 9: Section 1
+  Chapter 11: Sections 9-11
+
+Code:
+  Add 2 relationships to your app:
+    1. Has Many (one-to-many)
+    2. Has Many Through (many-to-many)
+  Add 2 named scopes
+
+Questions:
+1. What is ActiveRecord and why is it useful?
+
+	Rail's ORM. It maps each row of the database to an object, and allows for relationships to be created bewtween the objects.
+
+2. What problems could happen if you change a migration file after you have run it and committed it to github? (list 2)
+
+	anyone who clones your repository will have a different database than you will
+
+	
+
+3. What problems can you run into with the Rails has_and_belongs_to_many method? (list 2)
+
+	If requirements change you won't be able make changes to the interseciton table via migrations.
+
+	You can't add extra coloums to the intersection table and save that information to it.
+
+
+4. How is Rails form_for object oriented?
+
+	As a block, with HTML within the block with ERB fields.
+
+5. How would I use postgres in production and sqlite for development? What files would I change and how would I change them?
+
+	change the database.yml file to indicate that sqlite will be used for development and postgres for production, then include postgres as a production dependacy in the gemfile and run bundle install.
+
+6. What is the seeds file? How do I run it?
+
+	The seeds file in starting information you want to put in your database. You run it by using db:create after putting information in the seed file through the create! method
+
+Link to code on Github:
+https://github.com/owenkelly/GoalSpec

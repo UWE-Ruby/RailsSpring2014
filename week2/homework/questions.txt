@@ -9,6 +9,7 @@ Have a link on your homepage that triggers a change on your homepage (wording ch
 Create a view helper that will generate different content on your homepage based on a param value
 
 Questions:
+<<<<<<< HEAD
 1. Why does a Rails app have routing?
 	to provide a convenient and consistant way for a developer to specify paths 
 2. How would you render the same view for two different controllers? (code example is fine)
@@ -18,3 +19,11 @@ before_action: audit
 
 Link to code on Github:
 https://github.com/owenkelly/GoalSpec
+=======
+1. Why does a Rails app have routing? 
+2. How would you render the same view for two different controllers? (code example is fine)
+3. If you wanted to check a parameter before calling any controller action, what would you do? (code example is fine)
+
+Link to code on Github:
+<please put the link to your code on github here> 
+>>>>>>> 93f1826fb927a3959e8d7d0229f8573083f21fc0
