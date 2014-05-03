@@ -10,7 +10,7 @@ Create a view helper that will generate different content on your homepage based
 
 Questions:
 1. Why does a Rails app have routing? 
-<<<<<<< HEAD
+
 
 Routing allows you to create new pages, and allows you set a root route. 
 
@@ -24,10 +24,3 @@ I believe you would check the param in the Model.
 
 Link to code on Github:
 https://github.com/THEJRRR/DietStartsTomorrow
-=======
-2. How would you render the same view for two different controllers? (code example is fine)
-3. If you wanted to check a parameter before calling any controller action, what would you do? (code example is fine)
-
-Link to code on Github:
-<please put the link to your code on github here> 
->>>>>>> 9ab3c2d785ec0ab75331f4a1530f0e8daefca937
