@@ -1,7 +1,9 @@
 Reading:
-Chapter 21: All
-Active Record Validations: (http://guides.rubyonrails.org/active_record_validations.html)
+Chapter 21: All - X
+Active Record Validations: (http://guides.rubyonrails.org/active_record_validations.html) - X
 
 Code:
-Add 2 spec controller tests and methods
-Add 1 validation to a model including code and test
+Add 2 spec controller tests and methods - X
+Add 1 validation to a model including code and test - X
+
+link to code: https://github.com/lightener/test_app
