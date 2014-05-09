@@ -5,3 +5,9 @@ Active Record Validations: (http://guides.rubyonrails.org/active_record_validati
 Code:
 Add 2 spec controller tests and methods
 Add 1 validation to a model including code and test
+
+My project location:
+https://github.com/kewpiedoll/carbon_club
+
+Note: Due to some insane time commitments elsewhere I am a couple of weeks behind. I finished week4 HW just now (adding has_many relationships and a couple of scopes) to my project, which is uploaded to github. I was not able to get to the rspec testing this week. My plan is to catch up on all past HW, which simply means the HW due on 5/08, by Sunday. I will catch up on past reading (and answering the txt questions) by the next class (5/15). I will be off from work all of next week so this is a great time to catch up. It is unfortunate that I fell behind though it is what it is.
+
