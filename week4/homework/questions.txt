@@ -13,7 +13,7 @@ Code:
 Questions:
 1. What is ActiveRecord and why is it useful?
 
-	Rail's ORM. It maps each row of the database to an object, and allows for relationships to be created bewtween the objects.
+	Rail's ORM. It maps each row of the database to an object, and allows for relationships to be created between the objects.
 
 2. What problems could happen if you change a migration file after you have run it and committed it to github? (list 2)
 
