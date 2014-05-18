@@ -43,5 +43,5 @@ website url they want to conduct the search on. I also want to return
 the results as a nice table.
 
 Link to code on Github:
-https://github.com/rukk86/week1_railsapp
+https://github.com/rukk86/website_inspector_app
 
