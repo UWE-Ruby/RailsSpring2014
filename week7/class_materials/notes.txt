@@ -1,0 +1,19 @@
+config.include Devise::TestHelpers, type: :controller
+user = User.create or let :user {}
+sign_in  user
+
+  before(:each) do
+    ActionMailer::Base.delivery_method = :test
+    ActionMailer::Base.perform_deliveries = true
+    ActionMailer::Base.deliveries = []
+  end
+
+  after(:each) do
+    ActionMailer::Base.deliveries.clear
+  end
+
+  let(:mail) { ActionMailer::Base.deliveries.last }
+
+  it 'should send an email' do
+    ActionMailer::Base.deliveries.count.should == 1
+  end
