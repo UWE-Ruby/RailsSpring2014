@@ -1,0 +1,8 @@
+Reading:
+  Chapter 11.9-11.11
+  Chapter 8
+Code:
+  Add tests and form elements to create a relationship (like adding a course to a student through the form)
+
+Link to code on Github:
+ <please put the link to your code on github here>
