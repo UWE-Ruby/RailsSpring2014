@@ -7,9 +7,20 @@ Code:
 
 Questions:
   1. What is devise and why should we use it instead of creating our own login pattern?
+
+  Devise has been tested and has additional add ons that can be implemented, such as facebook login, etc. 
+
   2. How would devise require login before the home action on a welcome controller?
+
+  by using a before method that prompts a sign on on the welcome controller
+
   3. If I wanted to send an email each time a resource in my application was created how would I do it? (Pretend I have a FunMailer ActionMailer class with a notify_about_resource method)
+
+  edit the app/controllers/users_controller.rb make it instruct the UserMailer to deliver an email when the action is completed by editing the create action and inserting a call to UserMailer.welcome_email right after the action is completed .
+
   4. What is Authorization? How is it different from Authentication?
 
+  Authorization allows access to certain parts of your websites functionality, Authenticatin is the process of proving someone's identity. 
+
 Code:
-  <please paste a link to github here>
+https://github.com/THEJRRR/devise_test
