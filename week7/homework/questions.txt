@@ -7,18 +7,22 @@ Code:
 
 Questions:
   1. What is devise and why should we use it instead of creating our own login pattern?
-	Device is a framework that will provide authentation for your rail application. It has tons of features and options for your application, and it well built. Building up your own login pattern would be a lot of work when Devise is already there for you.
+  Device is a framework that will provide auth for your rail application. It has tons of features and options for your application, and it well built. Building up your own login pattern would be a lot of work when Devise is already there for you.
 
   2. How would devise require login before the home action on a welcome controller?
-	You could use action callball in the controller to check if the person is a current_user, if not redirect them!	
+  You could use action callback in the controller to check if the person is a current_user, if not redirect them! 
 
   3. If I wanted to send an email each time a resource in my application was created how would I do it? (Pretend I have a FunMailer ActionMailer class with a notify_about_resource method)
-	If you already have the FunMailer ActionMailer class created then you need to do a couple of things. First you need to create an email template and put it the views/fun_mailer folder with the same name as your method "notify_about_resource.html.erb". Now add the mail option to the notify_about_resource method. Now add a entry to the Funun us
-
-
+  If you already have the FunMailer ActionMailer class created then you need to do a couple of things. First you need to create an email template and put it the views/fun_mailer folder with the same name as your method "notify_about_resource.html.erb". Now add the mail method to the notify_about_resource method, and be sure to include the “To” address and subject line. Now add a method call to your resources controller to call the FunMailer class when a new resource is created. For example.. My app will email the admin when a new trail is created NewTrail.new_trail_created(@trail).deliver
 
   4. What is Authorization? How is it different from Authentication?
-	Authorization is much different than Authentication. Authorization is a model that uses specific permissions to allow a object to access it. For example, a User doesn't have Admin rights, so the user shouldn't be authorized to access a object an admin can.
+  Authorization is much different than Authentication. Authorization is a model that uses specific permissions to allow an object to access it. For example, a User doesn't have Admin rights, so the user shouldn't be authorized to access an object an admin can.
 
 Code:
-  <please paste a link to github here>
+https://github.com/Mattsface/NorthwestMTBTrails
+
+I couldn't figure out how to add login/logout tests :(
+
+This Rails app is getting scrapped, I plan to start over fresh.
+
+
