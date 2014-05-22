@@ -1,0 +1,18 @@
+Reading:
+  Chapter 14
+  Chapter 16
+Code:
+  Add devise for login/logout with tests
+  Add one ActionMailer with tests
+
+Questions:
+  1. What is devise and why should we use it instead of creating our own login pattern?
+  Devise is a gem for handling logins and authentication. It is well tested and has many features. If you were to roll your own, you would be left with security issues you wouldn't otherwise have if you had chosen to use devise or another well maintained solution.
+  2. How would devise require login before the home action on a welcome controller?
+  You could add before_action :authenticate_user in the welcome controller. Then it would redirect you to the login/signin page.
+  3. If I wanted to send an email each time a resource in my application was created how would I do it? (Pretend I have a FunMailer ActionMailer class with a notify_about_resource method)
+  4. What is Authorization? How is it different from Authentication?
+  Authorization gives permission for various users to access resources. Authentication is making sure who is accessing the resources, for example, by requiring a signin and session to access them.
+
+Code:
+  rebooting code here:  https://github.com/psytau/scaling-hipster-1
