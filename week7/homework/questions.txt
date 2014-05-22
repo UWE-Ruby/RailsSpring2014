@@ -13,9 +13,12 @@ Questions:
      c. Makes development lot faster.
 
   2. How would devise require login before the home action on a welcome controller?
-    before_action :authenticate_user! can be used in welcome controller to require login before the home action.
+     before_action :authenticate_user! can be used in welcome controller to require login before the home action.
 
   3. If I wanted to send an email each time a resource in my application was created how would I do it? (Pretend I have a FunMailer ActionMailer class with a notify_about_resource method)
+     The following code should be added in the new method of controller for the resource.
+     email = FunMailer.notify_about_resource(resource)
+     email.deliver
 
   4. What is Authorization? How is it different from Authentication?
     Authorization identifies "what" one can do, where as Authentication identifies "who" one is.
