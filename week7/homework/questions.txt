@@ -24,7 +24,7 @@ Questions:
   which is the process of proving that a user is who they say they are 
   (not necessarily a real-world identity,
   but at least the same identity that originally created the account.)
-  Usually one Authenticates before Authorizing, 
+  Usually Authorization depends on Authentication,
   but some actions could be authorized for anyone.
 
 Code:
