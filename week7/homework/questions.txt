@@ -19,7 +19,7 @@ def welcome_email(user)
     mail(to: @user.email, subject: 'Welcome to My Awesome Site')
   end
 
-If you wanted it to send it to yourself to notify you, you could add another mail(to:) line with your info?
+If you wanted it to send it to yourself to notify you, you could add another mail(to:) line with your info.
 
   4. What is Authorization? How is it different from Authentication?
 Authorization deals with what you are allowed to do, authentication deals with confirming identity.
