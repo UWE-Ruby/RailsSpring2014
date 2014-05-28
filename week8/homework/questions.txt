@@ -10,14 +10,14 @@ Code:
 
 Questions:
 1. What is Haml and why do we use it?
-"HTML abstraction markup language" -
-a (mostly) ruby-specific markup language specialized for generating {X}HTML.
-Unlike erb, it can't generate freeform content,
-but it is pretty crisp and terse for generating HTML.
-We would use it over erb because it is tidier looking,
-more concise,
-and doesn't require us to close our tags.
-On the downside, it means learning *yet another* DSL.
+  "HTML abstraction markup language" -
+  a (mostly) ruby-specific markup language specialized for generating [X]HTML.
+  Unlike erb, it can't generate freeform content,
+  but it is pretty crisp and terse for generating HTML.
+  We would use it over erb because it is tidier looking,
+  more concise,
+  and doesn't require us to close our tags.
+  On the downside, it means learning *yet another* DSL.
 
 2. What are the 3 biggest security concerns with a Rails Application?
  Philosophical version:
