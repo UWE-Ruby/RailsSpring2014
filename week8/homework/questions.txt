@@ -9,8 +9,30 @@ Code:
 
 Questions:
 1. What is Haml and why do we use it?
+
+	Haml is a lightweight markup language created by Hampton Catlin. It is a whitespace-sensitive template engine that does away with many of the closing brackets that you see with HTML and erb. Many people use it because of its simplicity and readability compared to the other markup languages.
+
+
 2. What are the 3 biggest security concerns with a Rails Application?
+
+	One of the biggest security concerns is code injection, be in SQL, HTML, or through any other means. 
+
+	Another security concern is to make sure you aren't storing plain text passwords! There are plenty of gems and methods to hash or encrypt sensitive information.
+
+	Don't store secret things in your source code!!
+
+
 3. What is the easiest thing you can do to secure your Rails application?
 
+	After working in the security field, I wish there was an easy answer to this question. Its easy to become sloppy and lazy with your code or systems, especially when you are pressed for time, and are trying to get the job done!
+
+	I believe the easiest thing to secure your rails application is to stay education on current rail security news, use gems and protocols correctly and with care in your application, peer review, and take your time!
+
+	I'm currently fighting implementing security features into a linux environment after it was rushed out the door. It's a nightmare. Staying focused on security and NOT forgetting about it is one of the easiest things to do.
+
+	Unless there is a "gem install rail-security" gem ;)
+
+
+
 Code:
-<please paste a link to your application on heroku and your github commit here>
+http://salty-bayou-7859.herokuapp.com
