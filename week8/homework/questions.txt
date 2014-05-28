@@ -21,6 +21,8 @@ On the downside, it means learning *yet another* DSL.
 
 2. What are the 3 biggest security concerns with a Rails Application?
 3. What is the easiest thing you can do to secure your Rails application?
+Don't deploy it.
+But you are probably looking for:
 
 Code:
 <please paste a link to your application on heroku and your github commit here>
