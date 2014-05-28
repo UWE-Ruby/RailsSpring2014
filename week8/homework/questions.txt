@@ -1,16 +1,64 @@
+Sarah Wheeler
+Ruby DL210
+May 26, 2014
+
+						Week 8 Homework
+
 Reading:
-  Chapter 1 Config
-  Chapter 12 Haml
-  Chapter 15 Security
+  Chapter 1 Config --done
+  Chapter 12 Haml --done
+  Chapter 15 Security --done
 
 Code:
-  Deploy your application to Heroku
-  Setup email on Heroku in production
+  Deploy your application to Heroku --done
+  		View at: http://cultivate.herokuapp.com/
+  Setup email on Heroku in production --done (but not 
+  		tested--waiting on the course video to go up)
 
 Questions:
+
 1. What is Haml and why do we use it?
+
+			Haml is an HTML engine available as a gem for both 
+			Ruby and Rails that gives developers the ability to 
+			template HTML quickly and minimally. It improves upon 
+			HTML by allowing you to replace opening and closing 
+			tags with single symbols, represent hierarchy through 
+			whitespacing, and trade cumbersome div tags for 
+			streamlined classes and ids that clearly correspond 
+			with your CSS. Rubyists use Haml because its engine 
+			allows you to pare HTML and ERb down to their most 
+			simplistic structures, which is in line with DRY 
+			principles and encourages rapid development.
+
+
 2. What are the 3 biggest security concerns with a Rails Application?
+
+			Rails security concerns typically fall in one of 
+			three areas: password and session protection, 
+			protection from injection attacks, and mass-
+			assignment parameter security. Fortunately, Rails v3 
+			and above were built with these considerations in mind, 
+			and it is easy to either implement secure systems for 
+			passwords and sessions (such as Devise), or use commands 
+			like 'has_secure_password' and 'protect_from_forgery 
+			with: exception' to manually add these precautions. 
+			Rails will also sanitize incoming HTML to prevent 
+			things like SQL injection attacks and cross-site 
+			scripting (XSS).
+
 3. What is the easiest thing you can do to secure your Rails application?
 
+			The easiest thing you can do is to never store 
+			important or sensitive information in plain text 
+			anywhere in your code. Besides ensuring that passwords 
+			for your application are securely hashed and filtered in your logs (which tools like Devise will set up for you 
+			automatically), you should also be sure to include 
+			'protect_from_forgery with: exception' in your 
+			Application controller to prevent cross-site request 
+			forgery attacks. 
+
+
 Code:
-<please paste a link to your application on heroku and your github commit here>
+	http://github.com/sarahwheeler/cultivate
+	http://cultivate.herokuapp.com/
