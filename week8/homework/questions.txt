@@ -23,6 +23,10 @@ On the downside, it means learning *yet another* DSL.
 3. What is the easiest thing you can do to secure your Rails application?
 Don't deploy it.
 But you are probably looking for:
+  class PersonWhoLogsIn
+    has_secure_password
+  end
+which gives us salted hashed passwords.
 
 Code:
 <please paste a link to your application on heroku and your github commit here>
