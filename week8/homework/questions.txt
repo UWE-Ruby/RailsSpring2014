@@ -22,7 +22,7 @@ On the downside, it means learning *yet another* DSL.
 2. What are the 3 biggest security concerns with a Rails Application?
  Philosophical version:
  1) Rails is too complicated for the Rails app developer to understand
-   (TR4W is 762 pp),
+   (736 links on http://api.rubyonrails.org/panel/links.html; TR4W is 762 pp),
    and is not a stable platform. 
    (210 releases as of commit 092b92f1bdddc21d92c8e60d1eb112759beb790a)
  2) Rails is too complicated for the Rails developers to understand.
