@@ -1,0 +1,20 @@
+Reading:
+  Chapter 1 Config
+  Chapter 12 Haml
+  Chapter 15 Security
+
+Code:
+  Deploy your application to Heroku
+  Setup email on Heroku in production
+
+Questions:
+1. What is Haml and why do we use it?
+Haml is a way to create html templates using a more ruby like syntax. We use it to make our templates look clean and easy to read.
+2. What are the 3 biggest security concerns with a Rails Application?
+Three major areas of security concerns are SQL injections, Cross-Site Scripting attacks, and attacks on sessions.
+3. What is the easiest thing you can do to secure your Rails application?
+Probably the easies way is to follow rails idioms. Use gems to handle logins and sessions. Use the ORM to clean you SQL before executing it. Use Strong Parameters to check data before passing it to controllers.
+
+Code:
+http://how-to-listen-to-podcasts.herokuapp.com
+https://github.com/psytau/scaling-hipster-1/commit/ce3eba1eac8859c18b14f3b43749d7eee92c4467
