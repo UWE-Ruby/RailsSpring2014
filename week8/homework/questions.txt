@@ -9,8 +9,22 @@ Code:
 
 Questions:
 1. What is Haml and why do we use it?
+	Haml is s HTML templating engine. It 
+		a. Removes the need for angle brackets, html tags etc by usng indentation to determine the hierarchy of HTML document. 
+		b. Also keeps the view logic out of templates by design.
+	The above two reasons should be sufficient for us to use it.
 2. What are the 3 biggest security concerns with a Rails Application?
+	a. Passing arbitrary data/code etc as a parameter
+	b. Leaking secure data in logs
+	c. Mass assignment of model attributes
 3. What is the easiest thing you can do to secure your Rails application?
+	Easiest things to do is to
+	a. Use standard gems like Devise for securing application
+	b. Usng strong parameters
+	c. Log masking
 
 Code:
-<please paste a link to your application on heroku and your github commit here>
+http://vjs-website.herokuapp.com
+
+https://github.com/jatla/vjs/commit/3ef87bdc4730785fa222081d52720f45e2c5f68d
+(The above checkin has ActionMailer config as well.)
