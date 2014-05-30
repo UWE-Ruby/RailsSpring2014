@@ -5,8 +5,7 @@ Reading:
 
 Code:
   Deploy your application to Heroku
-  get email set up
-  Convert your views to haml (can be pushed back)
+  Setup email on Heroku in production
 
 Questions:
 1. What is Haml and why do we use it?
