@@ -5,12 +5,19 @@ Reading:
 
 Code:
   Deploy your application to Heroku
-  Setup email on Heroku in production
+  Convert your views to haml
 
 Questions:
 1. What is Haml and why do we use it?
+HTML Abstract markup language. It's simpler to write, read, and refactor.
+
 2. What are the 3 biggest security concerns with a Rails Application?
+SQL injection, cross site scripting, XSRF (phishing)
+
 3. What is the easiest thing you can do to secure your Rails application?
+implement SSL?
 
 Code:
-<please paste a link to your application on heroku and your github commit here>
+http://doge-db.herokuapp.com/
+https://github.com/lightener/test_app
+

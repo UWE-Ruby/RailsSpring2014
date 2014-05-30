@@ -1,22 +1,34 @@
 Reading:
-  Chapter 6: Sections 4-6
-  Chapter 7: All
-  Chapter 9: Section 1
-  Chapter 11: Sections 9-11
+  Chapter 6: Sections 4-6 - X
+  Chapter 7: All - X
+  Chapter 9: Section 1 - X
+  Chapter 11: Sections 9-11 - X
 
 Code:
   Add 2 relationships to your app:
-    1. Has Many (one-to-many)
-    2. Has Many Through (many-to-many)
-  Add 2 named scopes
+    1. Has Many (one-to-many) - X
+    2. Has Many Through (many-to-many) - X
+  Add 2 named scopes - X
 
 Questions:
-1. What is ActiveRecord and why is it useful?
+1. What is ActiveRecord and why is it useful? ActiveRecord is an architecture for relational mapping of objects. It's useful for storing properties and relationships for objects in your database, that can be easily stored/retrieved without writing any SQL statements directly. 
+
 2. What problems could happen if you change a migration file after you have run it and committed it to github? (list 2)
+Screw up your schema.rb
+Databases get out of sync?
+
 3. What problems can you run into with the Rails has_and_belongs_to_many method? (list 2)
+Records returned from join tables being read only so you can't save changes.
+Extra attributes appearing on objects when you are not expecting them to
+
 4. How is Rails form_for object oriented?
+Rails turns forms into objects, using the fields as properties
+
 5. How would I use postgres in production and sqlite for development? What files would I change and how would I change them?
+You would change the database.yml and what you would change inside that file is the adapter under the development and production database headers.
+
 6. What is the seeds file? How do I run it?
+A file for creating seed data for your database, you run it with rake db:seed
 
 Link to code on Github:
-<please put the link to your code on github here>
+https://github.com/lightener/test_app

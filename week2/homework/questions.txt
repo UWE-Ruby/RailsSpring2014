@@ -10,8 +10,13 @@ Create a view helper that will generate different content on your homepage based
 
 Questions:
 1. Why does a Rails app have routing? 
-2. How would you render the same view for two different controllers? (code example is fine)
+To tell your app what to do when it receives a request, and to allow dynamic URL generation. 
+
+2. How would you render the same view for two different controllers?
+Explicitly calling render: <view> in your controllers.
+
 3. If you wanted to check a parameter before calling any controller action, what would you do? (code example is fine)
+Output to console?
 
 Link to code on Github:
-<please put the link to your code on github here> 
+https://github.com/lightener/test_app

@@ -7,9 +7,22 @@ Code:
 
 Questions:
   1. What is devise and why should we use it instead of creating our own login pattern?
+Devise is gem that provides an authentication solution. Devise handles creating the controller logic and form views for you, so there's less room for screwing it up. "You don't want to reinvent the wheel with Rails."
+
   2. How would devise require login before the home action on a welcome controller?
+Using "before_filter authenticate_user!" in your controller.
+
   3. If I wanted to send an email each time a resource in my application was created how would I do it? (Pretend I have a FunMailer ActionMailer class with a notify_about_resource method)
+def welcome_email(user)
+    @user = user
+    @url  = 'http://example.com/login'
+    mail(to: @user.email, subject: 'Welcome to My Awesome Site')
+  end
+
+If you wanted it to send it to yourself to notify you, you could add another mail(to:) line with your info.
+
   4. What is Authorization? How is it different from Authentication?
+Authorization deals with what you are allowed to do, authentication deals with confirming identity.
 
 Code:
-  <please paste a link to github here>
+  https://github.com/lightener/test_app
