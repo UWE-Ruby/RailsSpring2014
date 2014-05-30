@@ -1,3 +1,4 @@
+# vim: ts=2 wrap
 Reading:
   Chapter 14 authetication and authorization (used pundit, but R will use can-can and rollify)
   Chapter 16 action Mailer
@@ -29,6 +30,5 @@ Questions:
 
 Code:
   <please paste a link to github here>
-#vim ts=2
-
+    
   

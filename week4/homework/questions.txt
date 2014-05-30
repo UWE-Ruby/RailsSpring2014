@@ -7,8 +7,8 @@ Reading:
 Code:
   Add 2 relationships to your app:
     1. Has Many (one-to-many)
-    2. Has Many Through (many-to-many)      ✓
-  Add 2 named scopes - added 1
+    2. Has Many Through (many-to-many)
+  Add 2 named scopes
 
 Questions:
 1. What is ActiveRecord and why is it useful?
