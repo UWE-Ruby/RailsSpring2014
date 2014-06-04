@@ -11,13 +11,19 @@ Put it on Github
 
 Questions:
 1. What is the difference between Bundler and RVM?
+	RVM manages the Ruby/Gem environment - which versions to use.  Bundler handles dependencies between gems.
 2. What is REST and why is it useful?
+	REST organizes comunication between system components using routes.  It uses consistent naming and organization for apps.
 3. What does CRUD stand for? 
+	Create, Read, Update, Destroy
 4. What does this line of code do, and what file in my rails app would it go in?
    resources :students, except: :destroy
 
+   It creates all routes for Student except for destroy.
+
 Project Description:
-<please put your project description here>
+FoodJournal - A user's journal of foods and their nutrional values (calories, protein, fats, etc.) eaten by date and meal.  
 
 Link to code on Github:
-<please put the link to your code on github here>
+	https://github.com/lconway/FoodJournal
+
