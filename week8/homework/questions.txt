@@ -16,5 +16,9 @@ Three major areas of security concerns are SQL injections, Cross-Site Scripting 
 Probably the easies way is to follow rails idioms. Use gems to handle logins and sessions. Use the ORM to clean you SQL before executing it. Use Strong Parameters to check data before passing it to controllers.
 
 Code:
-http://how-to-listen-to-podcasts.herokuapp.com
-https://github.com/psytau/scaling-hipster-1/commit/ce3eba1eac8859c18b14f3b43749d7eee92c4467
+http://how-to-listen-to-podcasts.herokuapp.com (outdated)
+https://github.com/psytau/scaling-hipster-1/commit/ce3eba1eac8859c18b14f3b43749d7eee92c4467 (outdated)
+
+Note: rebooting again at 
+http://mobile-podcast-howto.herokuapp.com
+https://github.com/psytau/mobile-podcast-howto
