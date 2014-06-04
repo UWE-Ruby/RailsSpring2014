@@ -11,12 +11,56 @@ Code:
   Add 2 named scopes
 
 Questions:
-1. What is ActiveRecord and why is it useful?
+1. What is ActiveRecord and why is it useful? 
+
+Active Record allows you to access data in a database. It is the Model in the MVC. It allows us to store logic and data to be represented. 
+
 2. What problems could happen if you change a migration file after you have run it and committed it to github? (list 2)
+
+When someone else goes back to create an instance of your file, the migration will be different form yours, since a migration is only run once, and in timestamp order. Don’t mess with migration files. 
+
 3. What problems can you run into with the Rails has_and_belongs_to_many method? (list 2)
+
+If you ever want to go back and add additional associations to tables, you have to go back and manually create join tables, rather than just updating the associations in a model. 
+
 4. How is Rails form_for object oriented?
+It is set to default paths, that can all be overwritten inline. 
+
 5. How would I use postgres in production and sqlite for development? What files would I change and how would I change them?
+
+You can set what database you want in the config/database.yml file. For example:
+
+development:
+  adapter: mysql2
+  database: db1_dev
+  username: root
+  password: xyz
+  host: localhost
+
+development_sec:
+  adapter: mysql2
+  database: db2_dev
+  username: root
+  password: xyz
+  host: localhost
+
+production:
+  adapter: mysql2
+  database: db1_prod
+  username: root
+  password: xyz
+  host: your-production-ip
+
+production_sec:
+  adapter: mysql2
+  database: db2_prod
+  username: root
+  password: xyz
+  host: your-production-ip
+
 6. What is the seeds file? How do I run it?
 
+You run it with rake db:seeds, and it allows you to plant any information into your database that is necessary to run you application, such as city/state abbreviations. 
+
 Link to code on Github:
-<please put the link to your code on github here>
+https://github.com/THEJRRR/DietStartsTomorrow
