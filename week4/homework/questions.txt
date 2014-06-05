@@ -12,11 +12,26 @@ Code:
 
 Questions:
 1. What is ActiveRecord and why is it useful?
+-->ActiveRecord is the overarching class used for Models in the Rails structure.  It is useful because it includes many
+methods and properties that can be used to encapsulate your business logic into your Rails objects.
 2. What problems could happen if you change a migration file after you have run it and committed it to github? (list 2)
+-->12  The changes in the migration file are not incorporated into your database. 2) Any future attempt to recreate your
+database state by running the successive migrations will create a different database from what you currently have, making 
+your current database schema impossible to replicate again.
 3. What problems can you run into with the Rails has_and_belongs_to_many method? (list 2)
+-->1).  The join has to occur explicitly in your SQL tables, not in your Rails logic.  This is not transparent.  2)You will
+not be able to use callbacks or validate your data in the Rails code, as there is no model to hold this code.
 4. How is Rails form_for object oriented?
+-->It binds a form to a particular object, generating the HTML required for the form to access the properties of that
+object.  You don't have to work with individual properties one at a time, you can deal with the object.
 5. How would I use postgres in production and sqlite for development? What files would I change and how would I change them?
+-->You would simply change the databases.  You would do that by ensuring that the postgres gem is in the Gemfile file, and 
+run 'bundle install' if you had to add the gem.  You then modify the appropriate section of the config/database.yml file 
+to indicate which database to run in which environment.
 6. What is the seeds file? How do I run it?
+-->The seeds file is located in the db/seeds.rb file.  It is how you move the initial data into your database.  After 
+writing the data you wish to add to the database in the db/seeds.rb file, you run rake db:seed to move it into your 
+database.
 
 Link to code on Github:
-<please put the link to your code on github here>
+https://github.com/drlctr/Rails_id3

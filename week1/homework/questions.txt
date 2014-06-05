@@ -11,13 +11,17 @@ Put it on Github
 
 Questions:
 1. What is the difference between Bundler and RVM?
+-->RVM is used to designate a Ruby version and an associated Gemset.  It does not manage dependencies among gems.  Bundler is a tool that manages gems and gem dependencies.
 2. What is REST and why is it useful?
+-->REST is an acronym for Representational State Transfer.  It is useful in determining the design of database-back applications.
 3. What does CRUD stand for? 
+-->Create, Read, Update, and Destroy.
 4. What does this line of code do, and what file in my rails app would it go in?
    resources :students, except: :destroy
+-->This could be found in the routes.rb file in the rails config directory.  It creates three named routes, corresponding to the Create, Read, and Update actions for the Students controller.
 
 Project Description:
-<please put your project description here>
+I'm going to work on an MP3 cataloguer / organizer.  Not quite sure about the scope and requirements, but it will build on what I did in the first term.
 
 Link to code on Github:
-<please put the link to your code on github here>
+https://github.com/drlctr/Rails_id3

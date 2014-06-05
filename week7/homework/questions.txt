@@ -7,9 +7,13 @@ Code:
 
 Questions:
   1. What is devise and why should we use it instead of creating our own login pattern?
+  -->Devise is a pre-existing authentication and authorization framework easily installed into a Rails application.  It has the advantage of being very customizable and well tested, so it is much more effective and efficient that writing your own code.
   2. How would devise require login before the home action on a welcome controller?
+  -->By putting the statement, ':authenticate_user!' in a before_action statement.
   3. If I wanted to send an email each time a resource in my application was created how would I do it? (Pretend I have a FunMailer ActionMailer class with a notify_about_resource method)
+  -->Put the commend FunMailer.notify_about_resource into the requisite controller, such that the method gets controlled when the resource is created.
   4. What is Authorization? How is it different from Authentication?
+  -->Authorization is whether a user is permitted to take an action in your application.  Authentication is how you verify that a user is the person he or she says they are.
 
 Code:
-  <please paste a link to github here>
+  https://github.com/drlctr/Rails_id3
