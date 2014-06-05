@@ -6,17 +6,37 @@ Reading:
 
 Code:
   Add 2 relationships to your app:
-    1. Has Many (one-to-many)
-    2. Has Many Through (many-to-many)
-  Add 2 named scopes
+    1. Has Many (one-to-many) X
+    2. Has Many Through (many-to-many) Xs
+  Add 2 named scopes XX
 
 Questions:
 1. What is ActiveRecord and why is it useful?
+
+	Active Record is Magic, okay really, Active Record is the "M" in MVC. Active Record is a framework that allows you to create and represent models. I almost see it as a class to interface with a database. You can use active record to an instance of a database row. For example, we can create an instance of a student from the students database using active record. Whate can also use active record to initilize and edit databases, aka "migrations"
+
 2. What problems could happen if you change a migration file after you have run it and committed it to github? (list 2)
+
+	1. The current database, github, and migration file are out of sync. If you were to try and connect your current database with a copy of your app from github, it would run into errors because you haven't committed the latest migrations to github.
+
+	2. It can cause issues with out people on your team.
+
+
 3. What problems can you run into with the Rails has_and_belongs_to_many method? (list 2)
+
+	1. The joining table seems like it would be easy to overlook and would cause problems if you were to do migrations some where else.
+	2. This method is no longer used by many Rails programmers, and they will not be happy with you. ;)
+
+
 4. How is Rails form_for object oriented?
+	I'm having issues with this one. form_for does use the form builder object to create a form, and then methods to create the form are called on that object.
+
 5. How would I use postgres in production and sqlite for development? What files would I change and how would I change them?
+	You can edit the database.yml file so you use a different database per environment. You'll want to edit the adapter: parameter to the database type you want to use. There could be extra parameters depending on your configuration.
+
 6. What is the seeds file? How do I run it?
 
+	The seeds file is a file used to generate default (baseline) information for your database. You run it be executing rake db:seed or it is run when you execute rake db:setup.
+
 Link to code on Github:
-<please put the link to your code on github here>
+https://github.com/Mattsface/NorthwestMTBTrails

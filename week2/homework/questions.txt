@@ -3,15 +3,37 @@ Chapter 4 Working with Controllers: 4.3 - 4.7  (Skip the rack console exercise -
 Chapter 2 Routing: 2.1, 2.2, 2.4, 2.6, 2.7 
 
 Code:
-Setup a root route to a home or welcome controller
-Have a link on your homepage to your scaffolded resource from last week
-Have a link on your homepage that triggers a change on your homepage (wording change, expansion of text, change a color, etc...)
-Create a view helper that will generate different content on your homepage based on a param value
+Setup a root route to a home or welcome controller X
+Have a link on your homepage to your scaffolded resource from last week X
+Have a link on your homepage that triggers a change on your homepage (wording change, expansion of text, change a color, etc...) X
+Create a view helper that will generate different content on your homepage based on a param value X
 
 Questions:
 1. Why does a Rails app have routing? 
+	A rails app has routing to direct requests to their correct location in the application. For example the HTTP verb GET for the /photos would run the controller action photos#index and display a list of photos. The router provides a easy to understand way to add navigation for HTTP requests in your application.
+
 2. How would you render the same view for two different controllers? (code example is fine)
+	You could hardcode the view in the controllers using the render option. Add this code to both controllers.
+
+	def index
+		render '/derp/index.html.haml'
+	end
+
+
+
 3. If you wanted to check a parameter before calling any controller action, what would you do? (code example is fine)
 
+	You can use a Action Callback to acheivice this.. for example
+
+	class WaterController < ActionController::Base
+	  before_action :check_parameter
+
+	  protected
+	  def check_parameter
+	    # check the parameter before any actions are ran
+	  end
+
+	end
+
 Link to code on Github:
-<please put the link to your code on github here> 
+https://github.com/Mattsface/NorthwestMTBTrails
