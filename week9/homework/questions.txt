@@ -41,4 +41,7 @@ What 3 things did you learn that I didn’t go over in class?
 
 - While you did cover some of this in class, I spent a lot of time learning about scopes in rails, especially on my final project. 
 
-- Everything you taught to me in class was very new to me, so its hard for me to think of something that you didn't cover. I did do some extra reading on REST to help me handle an HTTP API used by PRTG (A monitoring application)
+- I played around with the css files included with a rails application.
+
+- Everything you taught to me in class was very new to me, so its hard for me to think of something that you didn't cover. I did do some extra reading on REST to help me handle an HTTP API used by PRTG (A monitoring application). I used the HTTP ruby gem to accomplish what I needed. 
+
