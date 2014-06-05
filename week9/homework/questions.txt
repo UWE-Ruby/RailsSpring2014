@@ -1,7 +1,43 @@
 Come to class prepared to present your project.
+http://salty-bayou-7859.herokuapp.com/users/sign_in
+
+
 You should be ready to answer these questions:
 
 What 3 things would you have done differently with your project?
+
+- Wrote out an order of operations for development. I switched project ideas towards the end of the quarter because my current project had just became a mess, and I believe I was aiming too high for the amount of experience I have with Ruby and Rails.
+
+- I wish I would have spent more time with my model relationships and the controllers. I spent enough time with them to get what I wanted to work, working. Release early, release often some say.. I would have handled the User -> List -> Items relationship much differently. I would have liked to put more thought into it.
+
+- I would like to try and improve my presentation a little bit better.. I'm not an artist, but I could have added some cool borders or something!
+
+
 What 3 things do you want to add to your project?
+
+There are several things that I would love to add to my project. 
+
+- I would like to add a monthly budget limit to your profile, so when you are adding lists you can at least try and meet a savings target.
+
+- I would like to improve my list controller, so it handles the Item / List model relationship better. I feel like the way I did it defiantly wasn't the ruby way, and makes testing extremely difficult. 
+
+- I would like to make adding items to a list more dynamic. Right now its just a static list of 20 items.
+
+- More RSPEC tests!
+
 What 3 things do you wish you knew when you started? 
+
+- Databases... I've attached web applications to them, but the inter workings of a DB had always been something I just let the application handle. It was really cool to learn about the one to one, one to many, and many to many relationships in a database.
+
+- Rails and how it is a framework. I guess I was expecting more ruby code, and thats it. I feel like I had to take on a whole different language. If I had a different expectation I believe things would have went smoother. 
+
+- Web Development. I spend way too much time on the command line, actually thats where I live pretty much. I wish I would have spent more time with HTML, CSS, and other web languages in College.
+
+
 What 3 things did you learn that I didn’t go over in class?
+
+- There are a lot of web frame works like Rails out there, including Django which is written in Python. 
+
+- While you did cover some of this in class, I spent a lot of time learning about scopes in rails, especially on my final project. 
+
+- Everything you taught to me in class was very new to me, so its hard for me to think of something that you didn't cover. I did do some extra reading on REST to help me handle an HTTP API used by PRTG (A monitoring application)
