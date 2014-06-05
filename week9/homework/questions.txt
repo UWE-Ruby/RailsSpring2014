@@ -1,5 +1,6 @@
 Come to class prepared to present your project.
-http://salty-bayou-7859.herokuapp.com/users/sign_in
+http://salty-bayou-7859.herokuapp.com/
+https://github.com/Mattsface/grocerystoreapp
 
 
 You should be ready to answer these questions:
