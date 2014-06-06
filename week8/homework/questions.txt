@@ -9,8 +9,16 @@ Code:
 
 Questions:
 1. What is Haml and why do we use it?
+	Haml is an alternative to HTML, which uses cleaner and more concise syntax to acheive the same results
+
 2. What are the 3 biggest security concerns with a Rails Application?
+
+	Password Managemnt, session security, database security
+
 3. What is the easiest thing you can do to secure your Rails application?
 
+	Moving sensative information to a figaro-generated applicaiton file or to secrests.yml
+
 Code:
-<please paste a link to your application on heroku and your github commit here>
+http://boiling-ridge-6865.herokuapp.com
+https://github.com/owenkelly/GoalSpec
