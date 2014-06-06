@@ -2,6 +2,15 @@ Come to class prepared to present your project.
 You should be ready to answer these questions:
 
 What 3 things would you have done differently with your project?
+- Choose a project that more easily demonstrated the relationships
+- Paid closer attention to the rspec tests
+
 What 3 things do you want to add to your project?
-What 3 things do you wish you knew when you started? 
+- Rspec tests that pass
+- Option for user to select food items in a particular food group
+
+What 3 things do you wish you knew when you started?
+- Everything we were going to put in the project
+
 What 3 things did you learn that I didn’t go over in class?
+- How to setup devise in a separate user model

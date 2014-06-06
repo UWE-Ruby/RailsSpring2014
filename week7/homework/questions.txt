@@ -7,9 +7,25 @@ Code:
 
 Questions:
   1. What is devise and why should we use it instead of creating our own login pattern?
+  
+  Devise is an authentication solution based on Warden. It should be used becuase it is well tested, reliable and relatively easy to setup.
+
   2. How would devise require login before the home action on a welcome controller?
+  
+  before_filter :authenticate_user!
+
   3. If I wanted to send an email each time a resource in my application was created how would I do it? (Pretend I have a FunMailer ActionMailer class with a notify_about_resource method)
+
+  def welcome_email user 
+  	@user = user
+  	mail(to: @user.email, subject: 'Welcome to this site!')
+  end
+
+
   4. What is Authorization? How is it different from Authentication?
 
+  Authorization verifies what you are authorized to do. Authentication verifies who you are.
+
+
 Code:
-  <please paste a link to github here>
+  https://github.com/kjlafave/calorie_tracker

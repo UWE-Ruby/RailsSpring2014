@@ -10,8 +10,20 @@ Create a view helper that will generate different content on your homepage based
 
 Questions:
 1. Why does a Rails app have routing? 
+To map requests to controller action methods and enable the dynamic generation of URLs for you to use as arguments to methods like link_to and redirect_to
+
 2. How would you render the same view for two different controllers? (code example is fine)
+You need to use the full path 
+render "products/show"
+
 3. If you wanted to check a parameter before calling any controller action, what would you do? (code example is fine)
+You can check the parameter value and call an action based on that value
+if @event
+  render :update
+else
+  render :new
+end
+
 
 Link to code on Github:
-<please put the link to your code on github here> 
+https://github.com/kjlafave/calorie_tracker

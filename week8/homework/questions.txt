@@ -9,8 +9,18 @@ Code:
 
 Questions:
 1. What is Haml and why do we use it?
+
+Haml is a HTML templating engine that uses indentation instead of markup code. We use it because it elimates the need to type HTML tags, resulting in faster development time.
+
 2. What are the 3 biggest security concerns with a Rails Application?
+
+Unencrypted passwords, unfiltered sensitive data in the logs and unsecure transmission of data between the browser and server.
+
 3. What is the easiest thing you can do to secure your Rails application?
+
+Use devise for authentication.
 
 Code:
 <please paste a link to your application on heroku and your github commit here>
+http://mysterious-escarpment-2355.herokuapp.com/
+https://github.com/kjlafave/calorie_tracker

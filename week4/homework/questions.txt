@@ -12,11 +12,22 @@ Code:
 
 Questions:
 1. What is ActiveRecord and why is it useful?
+It is framework that includes mechanisms for representing models and their relationships. It relies on convention over configuration and simplifies many operations, such as working with databases.
+
 2. What problems could happen if you change a migration file after you have run it and committed it to github? (list 2)
+The schema changes will not be available in github. You may lose database rollback capability.
+
 3. What problems can you run into with the Rails has_and_belongs_to_many method? (list 2)
+Not flexible if requirements change. Cannot make changes to migration file.
+
 4. How is Rails form_for object oriented?
+It yields a block parameter.
+
 5. How would I use postgres in production and sqlite for development? What files would I change and how would I change them?
+You change the databse.yml file. You would need to list the postgres as the database in the production block and sqlite as the databse in the development block.
+
 6. What is the seeds file? How do I run it?
+The seeds file is used on initialization to create data. To run, you add code to the seeds.rb file. You can also run the rake db:seed command from the console.
 
 Link to code on Github:
-<please put the link to your code on github here>
+https://github.com/kjlafave/calorie_tracker
