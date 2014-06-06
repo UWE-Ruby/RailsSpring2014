@@ -3,6 +3,7 @@ You should be ready to answer these questions:
 
 What 3 things would you have done differently with your project?
 - Choose a project that more easily demonstrated the relationships
+- Paid closer attention to the rspec tests
 
 What 3 things do you want to add to your project?
 - Rspec tests that pass
