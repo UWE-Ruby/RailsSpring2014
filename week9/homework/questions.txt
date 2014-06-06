@@ -2,6 +2,29 @@ Come to class prepared to present your project.
 You should be ready to answer these questions:
 
 What 3 things would you have done differently with your project?
+	I would have used a gem to managed the self-join relationship I had
+	I would not have reorganized by database the first time from a one-to-many self join to a many-to-many through self-join
+	I would have let devise make my user class first then add to it, as opposed to trying to integrate the already-created class into devise
+
+
 What 3 things do you want to add to your project?
-What 3 things do you wish you knew when you started? 
+	A user account settings page
+	cascasing sub-goal listings on the goals page, so only the 
+	supergoals initially appear
+	a compilied list of all the entries a user has made for one goal --
+
+	so you can see the story of the journey
+
+
+What 3 things do you wish you knew when you started?
+	
+	its all about how you organize your information
+	sometimes you have to be really explicit with rails for it to figure out what you want. It's not completely magical.
+	how important correctly naming things is -- in terms of plurialization, especially
+
+
 What 3 things did you learn that I didn’t go over in class?
+	I leaned a lot about self-joining relationships, both as one-to-many and has many :through varities
+	I leaned some basic things about scss and formatting to make things look pretty (or, less ugly)
+	There's a gem for everything
+
