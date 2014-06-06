@@ -1,23 +1,58 @@
+Sarah Wheeler
+Ruby DL210
+April 5, 2014
+
+						Week 1 Homework
+
 Reading:
-Chapter 1 - Section 1.1 on Bundler
-Chapter 3 REST, Resources, andRails - Sections 3.1 - 3.6
+    Chapter 1 - Section 1.1 on Bundler 
+    Chapter 3 REST, Resources, and Rails - Sections 3.1-3.6  
 
 Code:
-Create new rails app
-Add a ruby version and gemset to it
-Add one page of static content
-Create one Resource with Scaffolding
-Put it on Github
+    Create new rails app 
+    Add a ruby version and gemset to it
+    Add one page of static content 
+    Create one Resource with Scaffolding
+    Put it on Github 
 
 Questions:
-1. What is the difference between Bundler and RVM?
-2. What is REST and why is it useful?
-3. What does CRUD stand for? 
-4. What does this line of code do, and what file in my rails app would it go in?
-   resources :students, except: :destroy
+
+  1. What is the difference between Bundler and RVM?
+
+  	Bundler manages the gem dependencies by automatically installing all of the gem versions needed for a project. Bundler is run through the "bundle install" command, and this command should be run every time after the Gemfile for a project is updated. 
+
+  	RVM, on the other hand, allows you to manage and switch between different versions of Ruby and Rails, as well as context-specific gemsets. As one works with projects with a variety of gem and version specifications, being able to easily switch between versions is a convenient tool to have at hand. 
+
+
+  2. What is REST and why is it useful?
+
+  	REST stands for Representational State Transfer, and it is a network architecture that imposes a variety of constraints in order to take advantage of native HTTP constructs.
+
+  	One of the ways REST is most useful is in the way it handles the creation and mapping of Rails resources. It sets up efficient routing practices between resources and controllers, in addition to supplying a set of standard naming conventions for singular and plural routing. By following REST guidelines, developers are able to keep their websites well-organized and their routing logical.
+
+
+  3. What does CRUD stand for? 
+
+  	CRUD stands for Create, Read, Update, Delete. It corresponds to standard database operations, and RESTful methods ensure that Rails resources are able to perform these basic functions from the moment they are created. 
+
+
+  4. What does this line of code do, and what file in my rails app would it go in?
+     resources :students, except: :destroy
+
+     The previous line of code would set up RESTful routes for a "Students" resource in the Rails app. This means that six controller actions (index, create, show, update, new, and edit) would now be available to the Students resource. However, the "except: :destroy" clause prevents the destroy action from being created; this means that a user would not be able to delete a Student resource.
+
+     This line would be included in the config/routes.rb file.
+
 
 Project Description:
-<please put your project description here>
 
-Link to code on Github:
-<please put the link to your code on github here>
+  My project will be a web app that helps small, hobby-sized farms manage their animals and agricultural practices. Users would sign up for an account and be greeted with a dashboard that makes it easy for them to keep track of their numerous DIY to-dos, in addition to connecting with other hobbyist farmers. Although time and skill will ultimately determine which features I implement, here are a few ideas I'm considering to get started:
+
+    - Garden tracking--planting and harvesting schedules, predicted harvest quantities, severe weather warnings (via a weather API), composting and soil tools
+    - Animal management--stats for farm animals, feed calculators, breeding and health trackers, milking stats 
+    - Farm project tracking--a general project tool for managing tasks like installing/repairing fences, building shelters, digging ponds, etc. 
+
+
+
+Link to code on Github: https://github.com/sarahwheeler/farmstead
+  

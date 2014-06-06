@@ -1,7 +1,45 @@
+Sarah Wheeler
+June 5, 2014
+Ruby 210
+
+				Week 9 Homework
+
 Come to class prepared to present your project.
 You should be ready to answer these questions:
 
 What 3 things would you have done differently with your project?
+
+	  1. Better data model planning (don't name your columns
+	   'type').
+	  2. Don't try to immediately customize everything--get 
+	  the basic version running first.
+	  3. Written tests first, then code.
+
 What 3 things do you want to add to your project?
+
+	1. Garden tracking--planting and harvesting 
+	  schedules/calendars, predicted harvest quantities, 
+	  severe weather warnings (via a weather API), 
+	  composting and soil tools
+    2. Animal management--stats for farm animals, 
+       feed calculators, breeding and health trackers, 
+       milking stats 
+    3. Farm project tracking--a general project tool 
+    	for managing tasks like installing/repairing 
+    	fences, building shelters, digging ponds, etc. 
+
 What 3 things do you wish you knew when you started? 
+
+	1. That Rails is truly a DSL--you're not really 
+	   writing in Ruby.
+	2. That when I have trouble finding information 
+	    about what I'm debugging, I'm probably debugging 
+	    the wrong thing.
+	3. How easy it is to procrastinate with CSS. 
+
 What 3 things did you learn that I didn’t go over in class?
+
+	1. Bootstrap gem
+	2. Sass basics
+	3. Writing routing tests
+

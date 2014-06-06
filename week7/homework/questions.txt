@@ -1,15 +1,79 @@
+Sarah Wheeler
+Ruby DL210
+May 21, 2014
+
+						Week 7 Homework
+
 Reading:
-  Chapter 14
-  Chapter 16
+  Chapter 14 --done
+  Chapter 16 --done
+
 Code:
-  Add devise for login/logout with tests
-  Add one ActionMailer with tests
+  Add devise for login/logout with tests --done
+  Add one ActionMailer with tests --done
 
 Questions:
+
   1. What is devise and why should we use it instead of creating our own login pattern?
+
+			Devise is a Warden-based gem that provides secure 
+			authentication solutions for Rails apps. When 
+			installed, it automatically sets up your app to 
+			work with account sign ups, log ins, log outs, 
+			session controllers, and much more.  
+
+			Using a system like Devise is preferential to 
+			writing your own login pattern because it ensures 
+			that your site is secure, which is extremely 
+			difficult to do by writing an authentication system 
+			from scratch (even more so when you're new to Rails).
+			It also saves you an immense amount of time building standard authentication features, such as 'remember 
+			me' and email confirmation tools. 
+
   2. How would devise require login before the home action on a welcome controller?
+
+		  You would simply need to insert a 'before_filter' 
+		  statement into the controller. In this particular 
+		  example, your app/controllers/welcome_controller.rb 
+		  file should contain:
+
+		  		before_filter :authenticate_user!
+
   3. If I wanted to send an email each time a resource in my application was created how would I do it? (Pretend I have a FunMailer ActionMailer class with a notify_about_resource method)
+
+  		First, you would want to make sure that your 
+  		FunMailer class has been set up correctly through 
+  		the command 'rails generate mailer FunMailer'. 
+  		Next, you'd write a method for the resource email 
+  		notification; we'll assume our method is called 
+  		'resource_notification.' The method should include 
+  		the email recipient, email subject, and any other 
+  		pertinent object definitions (perhaps @resource). 
+  		You'll want to create the mailer view in a 
+  		app/views/fun_mailer/resource_notification.text.erb 
+  		file, and that can contain the email body message 
+  		(it can also be a .html.erb file containing HTML, 
+  		too).
+
+  		Finally, you'll want to call your new 
+  		'resource_notification' mailer method in your 
+  		Resource controller. It should be called at the 
+  		time of the resource object being created and saved, 
+  		in the--surprise!--create action.
+
   4. What is Authorization? How is it different from Authentication?
 
+	  	Authorization is responsible for determining what 
+	  	users can access and do within a website; for 
+	  	example, what pages they can view, what content 
+	  	they are allowed to post and create, etc. 
+
+	  	In comparison, authentication is the part of your 
+	  	system that is responsible for verifying the 
+	  	identity of your users--aka, the login/logout 
+	  	system. Authentication sets up secure password 
+	  	systems so users can identify themselves and access 
+	  	the content that they have been authorized to view. 
+
 Code:
-  <please paste a link to github here>
+  http://github.com/sarahwheeler/cultivate

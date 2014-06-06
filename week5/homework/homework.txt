@@ -1,7 +1,22 @@
+Sarah Wheeler
+May 3, 2014
+Ruby 210
+
+						Week 5 Homework
+
 Reading:
-Chapter 21: All
-Active Record Validations: (http://guides.rubyonrails.org/active_record_validations.html)
+	Chapter 21: All --done
+	Active Record Validations: (http://guides.rubyonrails.org/active_record_validations.html) --done
+
 
 Code:
-Add 2 spec controller tests and methods
-Add 1 validation to a model including code and test
+	Add 2 spec controller tests and methods --done
+		- One spec test added to requests/homes_spec.rb for index action
+		- Two spec tests added to Users controller (one functional, one for the view)
+	Add 1 validation to a model including code and test --done
+		- Email validation added to User model, User model spec test created, tests passing
+
+
+Code on Github:
+
+	http://github.com/sarahwheeler/cultivate

@@ -1,18 +1,33 @@
+Sarah Wheeler
+Ruby DL210
+April 23, 2014
+
+						Week 3 Homework
+
 Reading
-Chapter 1 - Section 1.6 on Configuring a DataBase
-Chapter 5 Working with Active Record - Sections 5.1 - 5.4
-Chapter 6 Active Record Migrations - Sections 6.1-6.3
+	Chapter 1 - Section 1.6 on Configuring a DataBase  --done
+	Chapter 5 Working with Active Record - Sections 5.1 - 5.4 --done
+	Chapter 6 Active Record Migrations - Sections 6.1-6.3 --done
 
 Code
-Add a different layout for 2 of your routes
-Create a controller filter for just one action
-Add a migration to your application
+	Add a different layout for 2 of your routes
+		Done: different layouts for 'root_path' and 'sign_up_path' (through Sign Up button found on root_path)
 
-Questions:
-1.
-2.
-3.
-4.
+	Create a controller filter for just one action
+		Done: inserted   
+				skip_before_action :require_login, only: [:new, :create]
+		in app/controllers/users_controller.rb
+
+	Add a migration to your application
+		Done: see app/db/migrate/20140424045859_add_farm_name_to_users.rb
+
+(Answers for) Questions (That No One Asked): 
+
+	1. Sure, but only on Tuesdays. 
+	2. Never with a hard g (gif pronunciation, that is).
+	3. Luna Lovegood and Remus Lupin.
+	4. I concur as well. 
 
 Link to code on Github:
-<please put the link to your code on github here>
+
+	https://github.com/sarahwheeler/cultivate
