@@ -11,13 +11,27 @@ Put it on Github
 
 Questions:
 1. What is the difference between Bundler and RVM?
+Bundler manages the gems that an app needs. RVM is a tool that enables users to install and manage
+multiple ruby environments. 
 2. What is REST and why is it useful?
+Representational State Transfer, as described by its creator Roy Fielding, is a network architectural style.
+REST, according to the Rails 4 Way book, helps provide services using the native
+idioms and constructs of HTTP. 
 3. What does CRUD stand for? 
+It stands for create, read, update and delete.
 4. What does this line of code do, and what file in my rails app would it go in?
    resources :students, except: :destroy
+It generates all routes except destroy.
+It would go in the config\routes.rb file.
+  
+   
+Info source: The Rails 4 Way book, https://rvm.io/, https://github.com/bundler/bundler, 
+http://api.rubyonrails.org/
 
+   
 Project Description:
-<please put your project description here>
+Tip Tracker offers newsrooms a way to keep track of the news tips
+that come in from various sources. 
 
 Link to code on Github:
-<please put the link to your code on github here>
+https://github.com/aml888/tip-tracker

@@ -10,8 +10,14 @@ Create a view helper that will generate different content on your homepage based
 
 Questions:
 1. Why does a Rails app have routing? 
-2. How would you render the same view for two different controllers? (code example is fine)
-3. If you wanted to check a parameter before calling any controller action, what would you do? (code example is fine)
+A Rails app has routing to map requests to controller action  methods, and to enable the dynamic generation 
+of URLS for use in methods including link_to and redirect_to.
 
+2. How would you render the same view for two different controllers? (code example is fine)
+
+3. If you wanted to check a parameter before calling any controller action, what would you do? (code example is fine)
+Use before_action
+
+*Source: Rails 4 Way
 Link to code on Github:
-<please put the link to your code on github here> 
+https://github.com/aml888/tip-tracker

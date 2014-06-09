@@ -9,8 +9,20 @@ Code:
 
 Questions:
 1. What is Haml and why do we use it?
+Haml, which stands for HTML abstraction markup language, was born out of creator Hampton Catlin's frustration with hand-typing templates.
+What Catlin came up with was, as described by Obie Fernandez in The Rails 4 Way, a "whitespace-sensitive" HTML templating engine that
+makes use of indentation to determine the hierarchy of an HTML document. Haml does away with angle brackets and eschews the need to close blocks
+and HTML tags.
+
+Developers use Haml because it enables them to focus on the structure of the page.
+
 2. What are the 3 biggest security concerns with a Rails Application?
+password management, cross-site scripting, cross-site request forgery
+
 3. What is the easiest thing you can do to secure your Rails application?
+securely hash passwords
 
 Code:
-<please paste a link to your application on heroku and your github commit here>
+http://dry-cliffs-1251.herokuapp.com/users/sign_in
+https://github.com/aml888/volunteer-coordinator
+
