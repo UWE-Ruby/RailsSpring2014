@@ -2,6 +2,38 @@ Come to class prepared to present your project.
 You should be ready to answer these questions:
 
 What 3 things would you have done differently with your project?
+
+-I would have tested my code more often and pushed to github in smaller, more frequent increments. There was a point in the project where I broke my application, and because I wasn't testing as I went along, I had no idea what it was that broke it. I spent most of my time trying to idenfify and fix the problem, and I could have saved a lot of time if I just checked that features were working as soon as I implemented them.
+
+-I would have also reviewed more documentation outside of class as well. There are a lot of great tutorials and resources that supplement the in-class learning, but I didn't actively pursue those until much later in the course when everything broke, and I had to start over from scratch.
+
+-If I had done the two things above, I would have had more time and knowledge to fix my mistakes, which would have given me a chance to really turn the app into what I really wanted it to be. There are a lot of features I wanted to add, but I didn't have time to research how to use them because of all the setbacks.
+
+
 What 3 things do you want to add to your project?
-What 3 things do you wish you knew when you started? 
+
+-I'd like to add more css to the app to make things look more professional. Right now, the layout is very bare bones, and it looks like something that would could carry malware.
+
+-Better relationships between all of the tables/databases and the ability to create custom views/searches for information.
+
+-I'd also like to place restrictions on how many submissions each author can make to a publisher. Email reminders letting authors know when it's time to follow up with a publisher would be great too.
+
+What 3 things do you wish you knew when you started?
+
+-I wish I had gone through Michael Hartl's Ruby on Rails tutorial before class started. Doing so would have given me a better foundation to understand the lectures.
+
+-I wish I had had a better understand of how rails works beforehand. There's a lot of "magic" that goes on behind the scenes, which is nice overall, but it's a little frustrating when you don't know why or how the magic works.
+
+-It would have been nice to also have a slightly better grasp of Ruby as well. I still feel that I don't understand that language as well as I could (or should).
+
 What 3 things did you learn that I didn’t go over in class?
+
+-I learned how to change a file's extension through the command line (i.e. changing .rdoc to .md) without having to open the document.
+
+-Overall, I feel like I'm much better at troubleshooting error messages on my own. We've covered this a little bit in class, but when I worked on my own project, I came across a lot of errors messages I've never seen before. Getting familiar with troubleshooting these messages on my own really helped me get certain features (such as the sign in/log out) working correctly.
+
+-This one is more of a personal lesson than a technical one, but I learned that I'm capable of learning Ruby on Rails. When I first started the class, I had reservations about whether I'd be able to get anything working on my app, but by the end of it, I feel much more comfortable with how Rails works and more confident in my ability to eventually become proficient in it.
+
+
+
+
