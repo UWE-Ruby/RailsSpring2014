@@ -11,13 +11,39 @@ Put it on Github
 
 Questions:
 1. What is the difference between Bundler and RVM?
+
+    RVM and rbenv manage Ruby versions. Bundler manages gems.
+
 2. What is REST and why is it useful?
+
+    REST (REpresentational State Transfer) is an architechtural style for distributed hypermedia systems. I love the quote at the beginning of Chapter 3 in The Rails 4 Way: 
+
+      "Before REST came I (and pretty much everyone else) never really knew where to put stuff." -- Jonas Nicklas
+
+    The above quote pretty clearly explains why the REST architectural style is useful. REST give you constraints that work well for web applications. It helps you quickly decide where to put stuff and how to map access to your resources.
+
 3. What does CRUD stand for? 
+
+    Create Read Update Delete
+
 4. What does this line of code do, and what file in my rails app would it go in?
    resources :students, except: :destroy
 
+    This would reside in config/routes.rb. It would give you the following routes:
+
+          Prefix Verb   URI Pattern                  Controller#Action
+        students GET    /students(.:format)          students#index
+                 POST   /students(.:format)          students#create
+     new_student GET    /students/new(.:format)      students#new
+    edit_student GET    /students/:id/edit(.:format) students#edit
+         student GET    /students/:id(.:format)      students#show
+                 PATCH  /students/:id(.:format)      students#update
+                 PUT    /students/:id(.:format)      students#update
+
 Project Description:
-<please put your project description here>
+
+    Accounting for a companion app that accepts online orders for a fee. The companion app is a storefront site that accepts online orders and forwards them to shops for a fee.
 
 Link to code on Github:
-<please put the link to your code on github here>
+
+    https://github.com/ilynne/myr-accounting

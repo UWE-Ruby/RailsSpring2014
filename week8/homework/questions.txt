@@ -9,8 +9,23 @@ Code:
 
 Questions:
 1. What is Haml and why do we use it?
+
+  HAML stands for HTML Abstraction Markup Language. It is a nicer alternative to ERB. We use it because HTML clutters up views and introduces a lot more room for error.
+
+  "We" [my day job] *don't* use it. But I was smitten the day I first saw example code in HAML and looked it up. I did read Chris Eppstein's "Haml Sucks for Content" post and it scared me off. But I am intrigued again. 
+
 2. What are the 3 biggest security concerns with a Rails Application?
+
+  Cross-site request forgery
+  Password management
+  Secrets (credentials for databases and other servers)
+
+
 3. What is the easiest thing you can do to secure your Rails application?
+
+  Issue a new session identifier upon login.
 
 Code:
 <please paste a link to your application on heroku and your github commit here>
+https://github.com/ilynne/myr-accounting
+http://infinite-retreat-2329.herokuapp.com

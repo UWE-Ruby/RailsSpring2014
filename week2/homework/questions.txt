@@ -10,8 +10,17 @@ Create a view helper that will generate different content on your homepage based
 
 Questions:
 1. Why does a Rails app have routing? 
+
+  To map requests to controller actions and to enable dynamic generation of URLs.
+
 2. How would you render the same view for two different controllers? (code example is fine)
+
+  render template: '<template>'
+
 3. If you wanted to check a parameter before calling any controller action, what would you do? (code example is fine)
 
+  I would set a constraint on the parameter in the route.
+
 Link to code on Github:
-<please put the link to your code on github here> 
+
+  https://github.com/ilynne/myr-accounting
