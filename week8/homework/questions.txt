@@ -9,8 +9,17 @@ Code:
 
 Questions:
 1. What is Haml and why do we use it?
+
+Haml stands for HTML abstraction markup language, and it's used to simplify markup and cleanly describe the HTML of any web document, without the use of inline code.
+
 2. What are the 3 biggest security concerns with a Rails Application?
+
+Password protection, injection attacks, and mass assignment parameters.
+
 3. What is the easiest thing you can do to secure your Rails application?
 
+Use the Devise gem to add user authentication. If the user is unable to log in securely, they won't be able to access sensitive data.
+
 Code:
-<please paste a link to your application on heroku and your github commit here>
+github.com/brandonlafave/submission_tracker
+http://submissiontracker.herokuapp.com/
