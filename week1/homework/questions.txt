@@ -17,7 +17,16 @@ Questions:
    resources :students, except: :destroy
 
 Project Description:
-<please put your project description here>
+<Wanderer is an app for people to search what to in San Francisco based on categories. The data will be pulled from Factual's API>
 
 Link to code on Github:
-<please put the link to your code on github here>
+<https://github.com/dogat-ruby/wanderer>
+
+
+Answers
+1-	RVM manages the multiple versions of Ruby on the same machine. Gemsets  of RVM is a powerful feature, it isolates the gems for one application/library from the rest of your system. 
+Bundler manages the gem installations based on your Gemfile and it tells where the gems
+should go and it installs them into the RVM folder. 
+2-	REST (Representational State Transfer) is a software architecture style that consists of a set of architectural constraints applied to components, connectors and data elements. It is a web-based communication style, it lets the application to talk to servers in a unique fashion.
+3-	CRUD stands for Create/Read/Update/Delete. It is an abbreviation for database operations. 
+4-	Resource routing allows you to quickly declare all of the common routes for a given resourceful controller. Inste
