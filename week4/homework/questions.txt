@@ -12,11 +12,34 @@ Code:
 
 Questions:
 1. What is ActiveRecord and why is it useful?
+ActiveRecord is the "M" in MVC. Active Record is the interface that Rails gives
+you between the database and your application.
+
 2. What problems could happen if you change a migration file after you have run it and committed it to github? (list 2)
+    1. If you have already run the migration then you cannot just edit the migration and run the migration again: Rails thinks it has
+already run the migration and so will do nothing when you run rake db:migrate. You must rollback the migration (for example with rake db:rollback), edit your
+migration and then run rake db:migrate to run the corrected version. 
+    2. In general, editing existing migrations is not a good idea, it may cause
+    inconsistentices if you are working in a team.
+
 3. What problems can you run into with the Rails has_and_belongs_to_many method? (list 2)
+The problems with habtm begin once you want to add extra columns to the join table, after which you'll want to
+upgrade the relationship to use has_many :through instead because records
+returned from join tables with additional attributes will be marked
+as read-only, because it's not possible to save changes to those additional
+attributes. Also it's clear how they are associated. Moreover, Unless the join table is explicitly 
+specified as an option, Rails guesses its name by concatenating the table names of the joined classes, in alphabetical order and separated with an underscore.
+
 4. How is Rails form_for object oriented?
+It turns forms into objects using the fields as properties.
+
 5. How would I use postgres in production and sqlite for development? What files would I change and how would I change them?
+You can change the database.yml and specify for each enviornment (production,
+development, etc.) which adapter (postgres, sqlite, etc.) to use.
+
 6. What is the seeds file? How do I run it?
+The seeds.rb file is good for populating common static records in the database,
+you can run it with "rake db:seed"
 
 Link to code on Github:
 <please put the link to your code on github here>

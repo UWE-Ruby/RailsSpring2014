@@ -10,8 +10,25 @@ Create a view helper that will generate different content on your homepage based
 
 Questions:
 1. Why does a Rails app have routing? 
+Routing serves two main purposes, it maps requests to controller
+action methods and it enables the dynamic generation of URLs for the
+programmer to use as arguments to methods like link_to and
+redirect_to.
+
 2. How would you render the same view for two different controllers? (code example is fine)
-3. If you wanted to check a parameter before calling any controller action, what would you do? (code example is fine)
+By default, controllers in Rails automatically render views with names
+that correspond to valid routes. I can render the same view for two
+different controllers by explicitly calling render with the view that
+I want to load. For example, I can choose to render action: 'new' within 
+the create action by explicitly calling it.
+
+3. If you wanted to check a parameter before calling any controller
+action, what would you do? (code example is fine)
+In this case we can use an action callback, which enables controllers to run
+shared pre and post processing code for its actions. These callbacks
+can be used to do authentication, caching or auditing before the
+intended action is performed. Ex. before_action
+:verify_open_shop
 
 Link to code on Github:
-<please put the link to your code on github here> 
+https://github.com/rukk86/week1_railsapp
