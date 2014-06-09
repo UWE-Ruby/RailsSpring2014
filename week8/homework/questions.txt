@@ -9,8 +9,21 @@ Code:
 
 Questions:
 1. What is Haml and why do we use it?
+Haml is hypertext is HTML mark-up langauge which is in the views coding of a rails app to assists with coding speed, readability and production speed.
 2. What are the 3 biggest security concerns with a Rails Application?
+Session hijacking
+Cross-site forgery request
+Admin/server-side security
 3. What is the easiest thing you can do to secure your Rails application?
 
+config.force_ssl = true
+
+also I think this is easy and very helpful:
+
+class User
+  has_secure_password
+end
+
 Code:
-<please paste a link to your application on heroku and your github commit here>
+https://github.com/kewpiedoll/carbon_club
+http://stormy-brushlands-4790.herokuapp.com
