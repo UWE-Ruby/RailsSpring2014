@@ -9,8 +9,11 @@ Code:
 
 Questions:
 1. What is Haml and why do we use it?
+	SIMPLER, SHORTER, LESS WORK, http://code.digimonkey.com/2010/02/why-use-haml-and-sass-i-already-know-html
 2. What are the 3 biggest security concerns with a Rails Application?
 3. What is the easiest thing you can do to secure your Rails application?
+Implement the CSFR token on all forms
 
 Code:
-<please paste a link to your application on heroku and your github commit here>
+https://github.com/danielwilliams12/koinoniablog
+Third try

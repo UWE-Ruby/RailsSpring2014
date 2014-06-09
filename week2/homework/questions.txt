@@ -3,15 +3,34 @@ Chapter 4 Working with Controllers: 4.3 - 4.7  (Skip the rack console exercise -
 Chapter 2 Routing: 2.1, 2.2, 2.4, 2.6, 2.7 
 
 Code:
-Setup a root route to a home or welcome controller
-Have a link on your homepage to your scaffolded resource from last week
-Have a link on your homepage that triggers a change on your homepage (wording change, expansion of text, change a color, etc...)
+1. Setup a root route to a home or welcome controller 
+	Done
+	get 'home', to: 'static_pages#home', as: :home
+
+2. Have a link on your homepage to your scaffolded resource from last week
+	I am still unsure how to do this.
+
+3. Have a link on your homepage that triggers a change on your homepage (wording change, expansion of text, change a color, etc...)
+
 Create a view helper that will generate different content on your homepage based on a param value
 
 Questions:
 1. Why does a Rails app have routing? 
+The Rails router recognizes URLs and dispatches them to a controller's action. It can also generate paths and URLs, avoiding the need to hardcode strings in your views.
+http://guides.rubyonrails.org/routing.html	
+
 2. How would you render the same view for two different controllers? (code example is fine)
+In my microposts controller I have 
+def thanks format_html render 'static_pages/about'
+  end
+  In my static_pages controller I have
+  def thanks format_html render 'static_pages/about'
+  end
+  In routes.rb I have
+  get 'thanks', to 'static_pages#about', as: :about
+
 3. If you wanted to check a parameter before calling any controller action, what would you do? (code example is fine)
+match '/about' => 'pages#show', :defaults => { :id => 'about' }
 
 Link to code on Github:
-<please put the link to your code on github here> 
+https://github.com/danielwilliams12/wbs

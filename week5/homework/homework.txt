@@ -4,4 +4,13 @@ Active Record Validations: (http://guides.rubyonrails.org/active_record_validati
 
 Code:
 Add 2 spec controller tests and methods
+  spec/controllers/microposts_controller_spec.rb
+  spec/controllers/users_controller_spec.rb
+
 Add 1 validation to a model including code and test
+class Micropost < ActiveRecord::Base
+     belongs_to :user
+     default_scope -> { micropost('created_by User') }
+     validates :user_id, presence: true
+     validates :content, length: { maximum: 140 }
+end
