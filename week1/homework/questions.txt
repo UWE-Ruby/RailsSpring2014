@@ -9,15 +9,145 @@ Add one page of static content
 Create one Resource with Scaffolding
 Put it on Github
 
+rvm use 2.0
+gem install rails
+rails new run_out_of_town_on_a_rail -T
+cd run_out_of_town_on_a_rail
+rvm --create use 2.0@run_out_of_town_on_a_rail --ruby-version
+echo "#customized:
+group :test, :development do
+  gem 'rspec-rails'
+end" >>Gemfile
+sed -i "s/gem 'sdoc', .*group: :doc/#customized:\ngroup :doc do\n  gem 'sdoc', require: false\nend/" Gemfile
+bundle install
+rails g rspec:install
+git init
+git add .
+git commit .
+
+rails g scaffold Outlaw name nick wanted_for:text back_story:text facial_hair how_punished hat
+rake db:migrate
+rm db/migrate/20140410181827/*
+git add .
+git commit
+(add sqlite to repo)
+
 Questions:
 1. What is the difference between Bundler and RVM?
+RVM manages multiple versions of Ruby on the same machine, and gemsets.
+Bundler manages dependancies. One might have a gemset for a project, but it 
+will not be shared with others. With a Bundler Gemfile under VC, anyone who
+grabs a project can have the dependancies auto-installed.
+
 2. What is REST and why is it useful?
+REST stands for REpresentational State Transfer. I don't understand it very 
+well. It is a set of (philosophical, not software) constraints on how machines
+talk over a network:
+  Communication is stateless. (I don't need to know what we were just talking
+    about to continue the conversation; I just reply to requests. If I need
+    something like context, maybe I'll ask for a cookie?)
+  We use client - server architecture. If you ask me for something, I deliver
+    it, I don't ask you to compute it yourself.
+  I don't send my actual resource (say, info in a database); I send a 
+    representation of that resource (the same info could be rendered as html,
+    json, a pdf, an mp3...).
+  I let you know if it is appropriate to cache my representation. If you ask
+    for how long until the bus comes, I'll let you know that there is no 
+    point in caching that information.
+  I try to make a URI semantic, reasonable, and always point the same 
+    resource. (The contents of that resource may change over time, but what it
+    is should not.)
+It is meant to be useful in making data transfer simple. It allows us to have
+permanent URIs.  It reduces problems from packet drops / service interruptions
+(didn't get it?  Ask again - I won't even notice you were gone.) The name is
+more soothing than SOAP. (You can say RESTful instead of SOAPy.) It allows us
+to not have to rethink network communication every time we develop a service,
+and is thus a design constraint that, like song forms or literary genres, 
+allows us to focus on the project rather than on building a new architecture.
+
 3. What does CRUD stand for? 
+Create, Read, Update, Destroy. 
+
+Snark from the c2 wiki[0]:
+Put a picture of the database on the screen and let the user fiddle with it. It
+lets you deliver an application without worrying overmuch about how it will be
+used, without wasting a lot of time talking to the user, and without actually
+having to do any design.
+
 4. What does this line of code do, and what file in my rails app would it go in?
    resources :students, except: :destroy
+That line in config/routes.rb will disallow destroying a student.
+Interestingly, it does not remove the destroy button from the gui.
+
+Rails generates a route for seven actions:
+  :index => GET
+  :show => GET 
+  :new => GET 
+  :create => POST
+  :edit => GET
+  :update => PATCH/PUT
+  :destroy => DELETE
+(it seems to me it would have been nice for rails to use the same terminology
+as http. And I do not understand the difference between the multiple GET 
+actions).
+So normally, a plain 
+  resources :students
+is generated when you run 
+  rails g scaffold Student [some attributes]
+in config/routes.rb
+and this generates all 7 actions. You can narrow this down with
+  ,except: :destroy
+or equivalently:
+  ,only [:index, :show, :new, :create, :edit, :update]
 
 Project Description:
 <please put your project description here>
+# for quarter project. - open source *and* publicly hosted. (Heroku)
+ideas:
+1) web wrapper for bread-calc. who would use it? home bakers, probably not,
+  except for the few like me who are interested in baker's percentages. Pro
+  bakers? Maybe, but they mostly already have their recipes worked out, and
+  probably do it by hand. Would adding cost of goods to it make it worth 
+  a baker's time?
+2) contraction timer. A rewrite of a simple script I wrote when my wife went
+  into labor. They won't let you come to the hospital until contractions are
+  N minutes apart, so you need to record them, and measure the intervals, 
+  which is not so great when you are excited, nervous, and distracted. Web UI
+  might be good for this because you don't have to install, can access 
+  anywhere(-ish). Bad part is mixing privacy / ease of use concerns. You don't
+  want to log in for every contraction, but you also don't want any possibility
+  of scrambling people's records, and I would prefer not to have it be 
+  something insurance companies / governments could subpoena for gross purposes.
+3) web front-end for https://github.com/eleybourn/Book-Catalogue. Maybe a bit
+  stupid, because the point of this app is to enter the books using your 
+  phone's barcode scanner. But it would be nice to have a web front-end for 
+  *reading* the data, instead of the very stupid export-as-csv-and-munge-with-
+  perl-into-static-html script I am using now.
+
+Addendum:
+OK, I am going with bread-calc. I will call it good if I can get it 
+into Rails and add cost of goods. Json exports For Free means it will still
+be beneficial for off-line use. A db means prices might be easier to maintain,
+and collaboration is an easier possibility, and maybe we can have a record
+of 'variations on a theme', or '1st try, 2nd try, etc'.
+Maybes:
+1) predictive text for drop downs (ww -> whole wheat flour, oa -> oats, etc).
+  This is probably a whole separate project (and there is probably a gem 
+  for it already.)
+2) an ingredients measure converter - again, a separate gem. I bet this does
+  not exist yet. Not a units converter (grams to pounds) but instead:
+    1 egg = 40 grams
+    1 cup all purpose flour = 130 grams
+3) Generalize it to Recipe. Maybe Recipe is a module, mixed in to BreadRecipe,
+  and BeerRecipe, and GenericRecipe? Or Beer and Bread are subclassed from 
+  Recipe. Maybe. I like how focussed it is as it stands, but I seems to just
+  be a subset of a more general domain.
+4) Rewrite in a more Prolog-ish manner, so it is natural to ask: "If I am
+  making a 60% loaf with 500 mL water, and I have measured out 200 g of 
+  whole wheat, how much all-purpose flour would I add to bring me up to bp100?"
 
 Link to code on Github:
 <please put the link to your code on github here>
+https://github.com/nbirnel/run_out_of_town_on_a_rail
+
+[0] http://c2.com/cgi/wiki?CrudScreen

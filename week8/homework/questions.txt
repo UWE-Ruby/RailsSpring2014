@@ -9,8 +9,40 @@ Code:
 
 Questions:
 1. What is Haml and why do we use it?
+  "HTML abstraction markup language" -
+  a (mostly) ruby-specific markup language specialized for generating [X]HTML.
+  Unlike erb, it can't generate freeform content,
+  but it is pretty crisp and terse for generating HTML.
+  We would use it over erb because it is tidier looking,
+  more concise,
+  and doesn't require us to close our tags.
+  On the downside, it means learning *yet another* DSL.
+
 2. What are the 3 biggest security concerns with a Rails Application?
+ Philosophical version:
+ 1) Rails is too complicated for the Rails app developer to understand
+   (736 links on http://api.rubyonrails.org/panel/links.html; TR4W is 762 pp),
+   and is not a stable platform. 
+   (210 releases as of commit 092b92f1bdddc21d92c8e60d1eb112759beb790a)
+ 2) Rails is too complicated for the Rails developers to understand.
+   (44205 commits, 37 branches, 2314 contributors, 599 open issues [github]
+   17420 SLOC, 45.24 person-years [SLOCCount]
+   as of commit 092b92f1bdddc21d92c8e60d1eb112759beb790a)
+ 3) Security appears to be an afterthought / bolt-on in the design, 
+   documentation, and third-party documentation of Rails. 
+   (eg security is a *chapter* in TR4W; secrets.yml not in .gitignore)
+ Concrete version:
+ 1) Passing user input directly to SQL calls.
+ 2) config/secrets.yml is placed under VC by default.
+ 3) Cross-site scripting by not escaping / sanitizing user input.
+
 3. What is the easiest thing you can do to secure your Rails application?
+Don't deploy it.
+But you are probably looking for:
+  class PersonWhoLogsIn
+    has_secure_password
+  end
+which gives us salted hashed passwords.
 
 Code:
 <please paste a link to your application on heroku and your github commit here>

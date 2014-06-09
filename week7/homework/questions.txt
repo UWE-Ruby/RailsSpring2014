@@ -1,15 +1,34 @@
+# vim: ts=2 wrap
 Reading:
-  Chapter 14
-  Chapter 16
+  Chapter 14 authetication and authorization (used pundit, but R will use can-can and rollify)
+  Chapter 16 action Mailer
 Code:
   Add devise for login/logout with tests
   Add one ActionMailer with tests
 
 Questions:
   1. What is devise and why should we use it instead of creating our own login pattern?
+  Devise is an authentication / login framework for use with Rails.
+  I would use it because it's popular -
+  security is almost always something where it it is better to use something
+  tried and proven than it is to roll your own.
   2. How would devise require login before the home action on a welcome controller?
+
+  class WelcomController < ApplicationController
+    before_action :authenticate_user!
+  end
+
   3. If I wanted to send an email each time a resource in my application was created how would I do it? (Pretend I have a FunMailer ActionMailer class with a notify_about_resource method)
   4. What is Authorization? How is it different from Authentication?
+  Authorization is the process of allowing a user to perform certain actions.
+  It is a completely separate idea from Authentication,
+  which is the process of proving that a user is who they say they are 
+  (not necessarily a real-world identity,
+  but at least the same identity that originally created the account.)
+  Usually Authorization depends on Authentication,
+  but some actions could be authorized for anyone.
 
 Code:
   <please paste a link to github here>
+    
+  

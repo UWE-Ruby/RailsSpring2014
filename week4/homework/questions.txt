@@ -12,11 +12,73 @@ Code:
 
 Questions:
 1. What is ActiveRecord and why is it useful?
+  ActiveRecord is Rails' implementation of and Object Relational Mapping:
+  translating ruby objects into SQL tables / records / statements, and vice-
+  versa.
+  It is useful because
+    a) you can write and read clean-ish ruby instead of dirty, filthy SQL. 
+    b) you can (partially) ignore SQL implementation differences, allowing
+       different DBs in production and development, or migration of DBs 
+       without rewriting the app.
+
 2. What problems could happen if you change a migration file after you have run it and committed it to github? (list 2)
+  a) Production could have run the migration already, and when they deploy
+  later changes they won't be in sync development. 
+  b) When production pulls, instead of a clean pull they may get a conflict,
+  which is presumably not their job to know how to reconcile.
+
 3. What problems can you run into with the Rails has_and_belongs_to_many method? (list 2)
+  a) It creates an intersection table with nothing but primary keys which is
+  not visible to Rails, so if each Table1 row has a unique key for each Table2
+  row it is related to, Rails can't put that in the intersection table. In
+  short, it makes it near impossible to extend the relation.
+  b) I can't find any other complaints about it. That complaint is good enough
+  for me. The only other problem I can come up with is that it will get you
+  laughed at or fired.
+  #FIXME probably not what Renée is looking for.
+
 4. How is Rails form_for object oriented?
+  It generates "form builder" object which has methods called on it to spit
+  out html:
+    do |builder|
+      builder.text_field
+      <code>
+      builder.submit 
+    end
+  (though this would typically be embedded in erb)
+  #FIXME this is not insightful
+
 5. How would I use postgres in production and sqlite for development? What files would I change and how would I change them?
+  Add a postgresql adaptor to config/databases.yml (more Rails cut and paste,
+  sigh). Bethany put the user/pass combo in here, but said that best practice
+  might be to .gitignore this file, and provide a database.yml.sample. Lynne
+  suggested something like:
+    password: ENV["POSTGRESQL_PROD_PASS"]
+  which I am a bit more comfortable with, but I'd like to be convinced
+  further.
+  
+  Add pg to Gemfile for :production. 
+
+  bundle install (note - I had to install some headers in Ubuntu for this -
+  bundler couldn't seem to figure out the system dependencies on it's own. This
+  would concern me for deployment.)
+
+  rake db:setup
+
 6. What is the seeds file? How do I run it?
+  db/seeds.rb contains ruby code to generate a default set of data - perhaps
+  for testing, perhaps for an initial population for production.
+  It is imperative in style:
+    SomeClass.create(a_key: "It's value",
+      another_key: "another value"
+      )
+  and is run by 
+    rake db:seed
+  You can pull in csv, yaml, etc by editing your Rakefile:
+  http://stackoverflow.com/questions/4410794/ruby-on-rails-import-data-from-a-csv-file
+  (ie, on the fly generate a hash for each record)
 
 Link to code on Github:
-<please put the link to your code on github here>
+https://github.com/nbirnel/bake_helper
+
+# vim: sw=2 wrap
